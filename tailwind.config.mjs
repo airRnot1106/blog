@@ -60,6 +60,7 @@ export default {
           highlightLow: '#f4ede8',
           highlightMed: '#dfdad9',
           highlightHigh: '#cecacd',
+          separator: '#e4dfde',
         },
       },
     },
