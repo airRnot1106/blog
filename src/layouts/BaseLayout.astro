@@ -1,0 +1,25 @@
+---
+import SiteFooter from '@/components/domain/site/molecules/SiteFooter.astro';
+import SiteHeader from '@/components/domain/site/molecules/SiteHeader.astro';
+
+import '@/globals.css';
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>airRnot.dev</title>
+  </head>
+  <body
+    class="flex flex-col min-h-screen text-rosePineDawn-text bg-rosePineDawn-base [&_*]:border-rosePineDawn-separator"
+  >
+    <SiteHeader class="px-6 py-2 border-b" />
+    <main class="grow">
+      <slot />
+    </main>
+    <SiteFooter class="bg-rosePineDawn-surface p-3 border-t" />
+  </body>
+</html>
