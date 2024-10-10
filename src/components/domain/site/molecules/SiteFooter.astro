@@ -1,0 +1,11 @@
+---
+import type { ComponentProps } from '@/types';
+
+export type SiteFooterProps = ComponentProps;
+type Props = SiteFooterProps;
+const { class: className } = Astro.props;
+---
+
+<footer class={`grid place-content-center ${className}`}>
+  <p class="text-xs">© 2024 - Copyright airRnot, All Rights Reserved.</p>
+</footer>
