@@ -14,12 +14,12 @@ import '@/globals.css';
     <title>airRnot.dev</title>
   </head>
   <body
-    class="flex flex-col min-h-screen text-rosePineDawn-text bg-rosePineDawn-base [&_*]:border-rosePineDawn-separator"
+    class="flex min-h-screen flex-col bg-rosePineDawn-base text-rosePineDawn-text [&_*]:border-rosePineDawn-separator"
   >
-    <SiteHeader class="px-6 py-2 border-b" />
+    <SiteHeader class="border-b px-6 py-2" />
     <main class="grow">
       <slot />
     </main>
-    <SiteFooter class="bg-rosePineDawn-surface p-3 border-t" />
+    <SiteFooter class="border-t bg-rosePineDawn-surface p-3" />
   </body>
 </html>
