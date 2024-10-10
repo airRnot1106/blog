@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "pnpm biome check --write ."
+    "check": "pnpm biome check --write .",
+    "lint:markup": "markuplint \"**/*.{html,jsx,tsx,astro}\""
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -17,6 +18,10 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
+    "@markuplint/astro-parser": "^4.6.7",
+    "@markuplint/jsx-parser": "^4.7.7",
+    "@markuplint/react-spec": "^4.5.7",
+    "markuplint": "^4.9.4",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }
