@@ -31,6 +31,7 @@
     "@markuplint/astro-parser": "^4.6.7",
     "@markuplint/jsx-parser": "^4.7.7",
     "@markuplint/react-spec": "^4.5.7",
+    "@tailwindcss/typography": "^0.5.15",
     "husky": "^9.1.6",
     "markuplint": "^4.9.4",
     "prettier": "^3.3.3",
