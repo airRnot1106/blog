@@ -1,0 +1,42 @@
+---
+import type { ComponentProps, FetchRetrun } from '@/types';
+import { zennArticleOgpResponseSchema } from '../schemas';
+import ZennArticleErrorCard from './ZennArticleErrorCard.astro';
+
+export type ZennArticleCardProps = ComponentProps & {
+  title: string;
+  slug: string;
+};
+type Props = ZennArticleCardProps;
+const { title, slug, class: className } = Astro.props;
+const articleUrl = `https://zenn.dev/airrnot1106/articles/${slug}`;
+
+const { data, error }: FetchRetrun<{ image: string }, Error> = await fetch(
+  `https://ogp-scanner.kunon.jp/v1/ogp_info?url=${articleUrl}`
+)
+  .then((res) => res.json())
+  .then((json) => {
+    const parsed = zennArticleOgpResponseSchema.parse(json);
+    const image = parsed.ogp['og:image'][0];
+    return { data: { image }, error: undefined } as const;
+  })
+  .catch((error: Error) => ({ data: undefined, error }) as const);
+---
+
+{
+  error ? (
+    <ZennArticleErrorCard class={`~w-48/96 ~h-24/48 ${className}`} />
+  ) : (
+    <div class={`~w-48/96 h-auto ${className}`}>
+      <a href={articleUrl}>
+        <img
+          src={data.image}
+          alt={title}
+          width="1200"
+          height="630"
+          class="rounded-lg"
+        />
+      </a>
+    </div>
+  )
+}

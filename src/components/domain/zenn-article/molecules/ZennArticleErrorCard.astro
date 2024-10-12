@@ -1,0 +1,23 @@
+---
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '@/components/ui/card';
+import type { ComponentProps } from '@/types';
+import { TriangleAlert } from 'lucide-react';
+
+export type ZennArticleErrorCardProps = ComponentProps;
+type Props = ZennArticleErrorCardProps;
+const { class: className } = Astro.props;
+---
+
+<Card className={`grid place-content-center ${className}`}>
+  <CardHeader />
+  <CardContent className="flex items-center ~gap-x-1/2">
+    <TriangleAlert size="16" />
+    <p class="~text-xs/sm">読み込みに失敗しました</p>
+  </CardContent>
+  <CardFooter />
+</Card>
