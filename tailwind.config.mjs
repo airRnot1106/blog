@@ -1,7 +1,12 @@
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ['class'],
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: {
+    files: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+    extract,
+  },
   theme: {
     extend: {
       borderRadius: {
@@ -63,7 +68,16 @@ export default {
           separator: '#e4dfde',
         },
       },
+      fontFamily: {
+        ich1Q: ['ich1Q'],
+      },
     },
+    screens,
+    fontSize,
   },
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+  plugins: [
+    fluid,
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+  ],
 };

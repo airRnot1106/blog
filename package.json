@@ -37,6 +37,7 @@
     "@markuplint/jsx-parser": "^4.7.7",
     "@markuplint/react-spec": "^4.5.7",
     "@tailwindcss/typography": "^0.5.15",
+    "fluid-tailwind": "^1.0.3",
     "husky": "^9.1.6",
     "markuplint": "^4.9.4",
     "prettier": "^3.3.3",
