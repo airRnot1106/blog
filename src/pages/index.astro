@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Heading from './components/atoms/Heading.astro';
+import ZennArticleList from '@/components/domain/zenn-article/molecules/ZennArticleList.astro';
 ---
 
 <BaseLayout>
@@ -13,6 +14,7 @@ import Heading from './components/atoms/Heading.astro';
     <Heading level="h2" title="最近の活動" subTitle="さいきんのかつどう" />
     <div>
       <Heading level="h3" title="技術記事" subTitle="わたしがかきました" />
+      <ZennArticleList />
     </div>
     <div>
       <Heading level="h3" title="TODO" subTitle="やりたいこと" />
