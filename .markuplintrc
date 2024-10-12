@@ -8,5 +8,6 @@
   },
   "extends": [
     "markuplint:recommended"
-  ]
+  ],
+  "excludeFiles": ["./src/components/ui/**/*"]
 }
