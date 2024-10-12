@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import Heading from './components/atoms/Heading.astro';
 ---
 
 <BaseLayout>
@@ -8,21 +9,12 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
     <p class="~text-base/3xl font-ich1Q">airRnot's blog</p>
   </div>
   <div class="~px-2/8 ~py-4/8 space-y-4">
-    <div class="flex items-center space-x-2">
-      <h2 class="~text-xl/3xl font-bold">最近の活動</h2>
-      <p class="~text-xs/sm font-bold font-ich1Q">さいきんのかつどう</p>
+    <Heading level="h2" title="最近の活動" subTitle="さいきんのかつどう" />
+    <div>
+      <Heading level="h3" title="技術記事" subTitle="わたしがかきました" />
     </div>
     <div>
-      <div class="flex items-center space-x-2">
-        <h3 class="~text-lg/2xl font-bold">技術記事</h3>
-        <p class="~text-xs/sm font-bold font-ich1Q">わたしがかきました</p>
-      </div>
-    </div>
-    <div>
-      <div class="flex items-center space-x-2">
-        <h3 class="~text-lg/2xl font-bold">TODO</h3>
-        <p class="~text-xs/sm font-bold font-ich1Q">やりたいこと</p>
-      </div>
+      <Heading level="h3" title="TODO" subTitle="やりたいこと" />
     </div>
   </div>
 </BaseLayout>

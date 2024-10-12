@@ -1,3 +1,3 @@
-export type ComponentProps<T = Record<string, unknown>> = {
+export type ComponentProps = {
   class?: string | undefined;
-} & T;
+};

@@ -1,0 +1,29 @@
+---
+import type { ComponentProps } from '@/types';
+
+type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+export type HeadingProps = ComponentProps & {
+  level: HeadingTag;
+  title: string;
+  subTitle: string;
+};
+type Props = HeadingProps;
+const { level, title, subTitle, class: className } = Astro.props;
+
+const Tag = level as keyof JSX.IntrinsicElements;
+
+const classMap = {
+  h1: '~text-2xl/4xl',
+  h2: '~text-xl/3xl',
+  h3: '~text-lg/2xl',
+  h4: '~text-base/xl',
+  h5: '~text-sm/ls',
+  h6: '~text-xs/base',
+} as const satisfies Record<HeadingTag, string>;
+---
+
+<div class="flex items-center space-x-2">
+  <Tag class={`font-bold ${classMap[level]} ${className}`}>{title}</Tag>
+  <p class="~text-xs/sm font-bold font-ich1Q">{subTitle}</p>
+</div>
