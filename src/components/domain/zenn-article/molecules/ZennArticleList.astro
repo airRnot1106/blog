@@ -44,11 +44,9 @@ const {
 
 {
   error ? (
-    <ZennArticleErrorList class={`~h-24/48 ~m-2/4 ${className}`} />
+    <ZennArticleErrorList class={`~h-24/48 ${className}`} />
   ) : (
-    <ul
-      class={`flex itesm-center ~gap-2/4 ~p-2/4 overflow-x-auto ${className}`}
-    >
+    <ul class={`flex itesm-center ~gap-2/4 overflow-x-auto ${className}`}>
       {data.articles.map(({ title, slug }) => (
         <li>
           <ZennArticleCard title={title} slug={slug} />
