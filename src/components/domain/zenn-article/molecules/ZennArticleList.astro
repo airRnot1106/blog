@@ -1,0 +1,59 @@
+---
+import type { ComponentProps, FetchReturn } from '@/types';
+import { zennArticleListResponseSchema } from '../schemas';
+import type { ZennArticleCardProps } from './ZennArticleCard.astro';
+import ZennArticleCard from './ZennArticleCard.astro';
+import ZennArticleErrorList from './ZennArticleErrorList.astro';
+
+export type ZennArticleListProps = ComponentProps;
+type Props = ZennArticleListProps;
+const { class: className } = Astro.props;
+
+const MAX_LENGTH = 6;
+
+const {
+  data,
+  error,
+}: FetchReturn<
+  {
+    readonly articles: { readonly title: string; readonly slug: string }[];
+  },
+  Error
+> = await fetch('https://zenn.dev/api/articles?username=airrnot1106')
+  .then((res) => res.json())
+  .then((json) => {
+    const parsed = zennArticleListResponseSchema.parse(json);
+    const articles = parsed.articles
+      .sort(
+        (a, b) =>
+          new Date(b.published_at).getTime() -
+          new Date(a.published_at).getTime()
+      )
+      .map(
+        ({ title, slug }) =>
+          ({
+            title,
+            slug,
+          }) as const satisfies ZennArticleCardProps
+      )
+      .slice(0, MAX_LENGTH);
+    return { data: { articles }, error: undefined } as const;
+  })
+  .catch((error: Error) => ({ data: undefined, error }) as const);
+---
+
+{
+  error ? (
+    <ZennArticleErrorList class={`~h-24/48 ~m-2/4 ${className}`} />
+  ) : (
+    <ul
+      class={`flex itesm-center ~gap-2/4 ~p-2/4 overflow-x-auto ${className}`}
+    >
+      {data.articles.map(({ title, slug }) => (
+        <li>
+          <ZennArticleCard title={title} slug={slug} />
+        </li>
+      ))}
+    </ul>
+  )
+}
