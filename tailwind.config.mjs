@@ -70,6 +70,7 @@ export default {
       },
       fontFamily: {
         ich1Q: ['ich1Q'],
+        zen_kaku_gothic_new: ['Zen Kaku Gothic New', 'sans-serif'],
       },
     },
     screens,
