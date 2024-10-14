@@ -9,5 +9,5 @@
   "extends": [
     "markuplint:recommended"
   ],
-  "excludeFiles": ["./src/components/ui/**/*"]
+  "excludeFiles": ["./src/components/ui/**/*", "./dist/**/*"]
 }
