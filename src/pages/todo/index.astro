@@ -1,0 +1,12 @@
+---
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
+import { getEntry } from 'astro:content';
+
+const entry = await getEntry('article', 'todo');
+const { Content } = await entry.render();
+const header = { ...entry.data };
+---
+
+<ArticleLayout {...header}>
+  <Content />
+</ArticleLayout>
