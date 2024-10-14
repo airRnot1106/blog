@@ -1,0 +1,18 @@
+---
+import type { ComponentProps } from '@/types';
+import DateText, {
+  type DateTextProps,
+} from '@/components/base/atoms/DateText.astro';
+import PublishIcon, { type PublishIconProps } from './PublishIcon.astro';
+
+export type PublishDateProps = ComponentProps &
+  PublishIconProps &
+  DateTextProps;
+type Props = PublishDateProps;
+const { size, date, class: className } = Astro.props;
+---
+
+<div class={`flex items-center gap-2 ${className}`}>
+  <PublishIcon size={size} />
+  <DateText date={date} />
+</div>
