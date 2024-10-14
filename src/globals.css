@@ -14,3 +14,11 @@
     --radius: 0.5rem;
   }
 }
+
+@layer utilities {
+  .prose input[type="checkbox"] {
+    @apply scale-125;
+    @apply lg:scale-[1.8];
+    @apply mr-2;
+  }
+}
