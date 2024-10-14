@@ -13,4 +13,16 @@ export default defineConfig({
     }),
     react(),
   ],
+  vite: {
+    server: {
+      proxy: {
+        '/fonts': {
+          target: 'https://cloud.ich1q.one',
+          changeOrigin: true,
+          rewrite: (path) =>
+            path.replace(/^\/fonts/, '/s/YiAfAKScqFgMDHj/download'),
+        },
+      },
+    },
+  },
 });
