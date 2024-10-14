@@ -1,0 +1,14 @@
+---
+import type { ComponentProps } from '@/types';
+import { format } from '@formkit/tempo';
+
+export type DateTextProps = ComponentProps & {
+  date: Date;
+};
+type Props = DateTextProps;
+const { date, class: className } = Astro.props;
+
+const formattedDate = format(date, 'YYYY-MM-DD');
+---
+
+<p class={className}>{formattedDate}</p>
