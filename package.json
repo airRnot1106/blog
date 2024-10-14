@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "node pre-build.cjs && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "check": "pnpm biome check --write .",
@@ -41,6 +41,7 @@
     "fluid-tailwind": "^1.0.3",
     "husky": "^9.1.6",
     "markuplint": "^4.9.4",
+    "node-fetch": "2",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   }
