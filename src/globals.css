@@ -1,8 +1,11 @@
-@import url("./fonts/stylesheet.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "ich1Q";
+  src: url("/fonts/ich1Q-hand-Regular.ttf") format("truetype");
+}
 
 @layer base {
   :root {
