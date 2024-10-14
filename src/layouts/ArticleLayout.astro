@@ -1,0 +1,49 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PublishDateText from '@/components/case/publish/atoms/PublishDateText.astro';
+import UpdateDateText from '@/components/case/update/atoms/UpdateDateText.astro';
+
+export type ArticleLayoutProps = {
+  title: string;
+  subTitle?: string | undefined;
+  description?: string | undefined;
+  publishedAt: Date | undefined;
+  updatedAt?: Date | null | undefined;
+};
+type Props = ArticleLayoutProps;
+const { title, subTitle, description, publishedAt, updatedAt } = Astro.props;
+---
+
+<BaseLayout>
+  <header class="flex flex-col items-center ~px-2/8 ~pt-6/12">
+    <h1 class="~text-4xl/7xl font-bold">{title}</h1>
+    {subTitle && <p class="~text-base/3xl font-ich1Q">{subTitle}</p>}
+    {description && <p class="mt-4">{description}</p>}
+    <div class="flex items-center ~gap-2/4 mt-2 ~mb-1/0 self-end">
+      {
+        publishedAt && (
+          <PublishDateText
+            date={publishedAt}
+            size={16}
+            class="text-rosePineDawn-iris ~text-xs/base"
+          />
+        )
+      }
+      {
+        updatedAt && (
+          <UpdateDateText
+            date={updatedAt}
+            size={16}
+            class="text-rosePineDawn-iris ~text-xs/base"
+          />
+        )
+      }
+    </div>
+  </header>
+  <hr class="~mx-2/8" />
+  <div
+    class="prose prose-lg lg:prose-xl max-w-none prose-headings:text-rosePineDawn-text prose-p:text-rosePineDawn-text prose-h1:before:content-['#_'] prose-h2:before:content-['##_'] prose-h3:before:content-['###_'] prose-h4:before:content-['####_'] ~px-6/96 ~py-4/6"
+  >
+    <slot />
+  </div>
+</BaseLayout>
