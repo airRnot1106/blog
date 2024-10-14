@@ -1,0 +1,12 @@
+---
+import type { ComponentProps } from '@/types';
+import { RefreshCw } from 'lucide-react';
+
+export type UpdateIconProps = ComponentProps & {
+  size: number;
+};
+type Props = UpdateIconProps;
+const { size, class: className } = Astro.props;
+---
+
+<RefreshCw size={size} className={className} />

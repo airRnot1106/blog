@@ -1,0 +1,12 @@
+---
+import type { ComponentProps } from '@/types';
+import { PencilLine } from 'lucide-react';
+
+export type PublishIconProps = ComponentProps & {
+  size: number;
+};
+type Props = PublishIconProps;
+const { size, class: className } = Astro.props;
+---
+
+<PencilLine size={size} className={className} />
