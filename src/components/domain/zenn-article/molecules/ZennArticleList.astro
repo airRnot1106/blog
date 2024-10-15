@@ -27,14 +27,14 @@ const {
       .sort(
         (a, b) =>
           new Date(b.published_at).getTime() -
-          new Date(a.published_at).getTime()
+          new Date(a.published_at).getTime(),
       )
       .map(
         ({ title, slug }) =>
           ({
             title,
             slug,
-          }) as const satisfies ZennArticleCardProps
+          }) as const satisfies ZennArticleCardProps,
       )
       .slice(0, MAX_LENGTH);
     return { data: { articles }, error: undefined } as const;

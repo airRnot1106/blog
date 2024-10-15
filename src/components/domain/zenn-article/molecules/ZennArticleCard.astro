@@ -12,7 +12,7 @@ const { title, slug, class: className } = Astro.props;
 const articleUrl = `https://zenn.dev/airrnot1106/articles/${slug}`;
 
 const { data, error }: FetchReturn<{ image: string }, Error> = await fetch(
-  `https://ogp-scanner.kunon.jp/v1/ogp_info?url=${articleUrl}`
+  `https://ogp-scanner.kunon.jp/v1/ogp_info?url=${articleUrl}`,
 )
   .then((res) => res.json())
   .then((json) => {
