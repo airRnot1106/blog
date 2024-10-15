@@ -1,0 +1,62 @@
+---
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import ArticleLayout, {
+  type ArticleLayoutProps,
+} from '@/layouts/ArticleLayout.astro';
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
+import { parse } from '@formkit/tempo';
+
+const header = {
+  title: 'About',
+  subTitle: 'おまえだれ？',
+  description: 'わたしについて',
+  publishedAt: parse('2024-10-15'),
+  updatedAt: parse('2024-10-15'),
+} as const satisfies ArticleLayoutProps;
+---
+
+<ArticleLayout {...header}>
+  <div class="flex flex-col items-center not-prose text-rosePineDawn-text">
+    <img
+      src="https://github.com/airRnot1106.png"
+      alt=""
+      width="460"
+      height="460"
+      class="~w-32/64 ~h-32/64 rounded-full"
+    />
+    <h2 class="~text-2xl/4xl font-bold ~mt-2/4">airRnot</h2>
+    <p class="~text-xs/base mt-6">
+      フロントエンドが好きです。最近はdotfiles盆栽が趣味。
+    </p>
+    <hr class="w-full mt-2" />
+    <ul
+      class="flex items-center [&>li:not(:last-child)]:after:content-['/'] [&>li:not(:last-child)]:after:~text-xs/lg [&>li:not(:last-child)]:after:mx-2"
+    >
+      <li>
+        <a
+          href="https://github.com/airRnot1106"
+          class="~text-xs/base text-rosePineDawn-iris hover:underline">GitHub</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://bsky.app/profile/airrnot.bsky.social"
+          class="~text-xs/base text-rosePineDawn-iris hover:underline"
+          >Bluesky</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://zenn.dev/airrnot1106"
+          class="~text-xs/base text-rosePineDawn-iris hover:underline">Zenn</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://qiita.com/airRnot1106"
+          class="~text-xs/base text-rosePineDawn-iris hover:underline">Qiita</a
+        >
+      </li>
+    </ul>
+  </div>
+</ArticleLayout>
