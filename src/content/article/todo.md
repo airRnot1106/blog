@@ -29,6 +29,8 @@ updatedAt: 2024-10-07
 ## Tool
 
 - [ ] Warp以外のTerminalの検討
+    - [ ] Alacritty vs WezTerm
+    - [ ] tmuxの設定
 - [ ] Hammerspoonの使い方の調査
 - [ ] Lazygit内でaicommitsを実行できるようにする
 
