@@ -3,7 +3,7 @@ title: 'TODO'
 subTitle: 'やりたいこと'
 description: 'やりたいことをまとめた場所です'
 publishedAt: 2024-10-06
-updatedAt: 2024-10-16
+updatedAt: 2024-10-17
 ---
 
 ## Neovim
@@ -30,8 +30,9 @@ updatedAt: 2024-10-16
 
 - [ ] Warp以外のTerminalの検討
     - [x] Alacritty vs WezTerm
-        - Alacrittyで決定
+        - WezTermで決定
     - [ ] zellijの設定
+        - [ ] keybindsをnvimに合わせる
 - [ ] Hammerspoonの使い方の調査
 - [ ] Lazygit内でaicommitsを実行できるようにする
 
