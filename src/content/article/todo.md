@@ -3,7 +3,7 @@ title: 'TODO'
 subTitle: 'やりたいこと'
 description: 'やりたいことをまとめた場所です'
 publishedAt: 2024-10-06
-updatedAt: 2024-10-19
+updatedAt: 2024-10-20
 ---
 
 ## Neovim
@@ -43,3 +43,4 @@ updatedAt: 2024-10-19
 ## other
 
 - [ ] Nix meetup #1のポジションシートを書く
+- [ ] blogにトレンド技術をまとめる
