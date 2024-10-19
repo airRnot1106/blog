@@ -3,7 +3,7 @@ title: 'TODO'
 subTitle: 'やりたいこと'
 description: 'やりたいことをまとめた場所です'
 publishedAt: 2024-10-06
-updatedAt: 2024-10-17
+updatedAt: 2024-10-19
 ---
 
 ## Neovim
@@ -12,6 +12,7 @@ updatedAt: 2024-10-17
 
 - [ ] markdown用の設定
 - [ ] ts_lsとtailwindcss_lspが競合する問題の解消
+- [ ] format on saveの動作が不安定な問題の解消
 
 ### Plugin
 
@@ -28,11 +29,13 @@ updatedAt: 2024-10-17
 
 ## Tool
 
-- [ ] Warp以外のTerminalの検討
+- [x] Warp以外のTerminalの検討
     - [x] Alacritty vs WezTerm
         - WezTermで決定
-    - [ ] zellijの設定
-        - [ ] keybindsをnvimに合わせる
+- [ ] WezTermの設定
+    - [ ] keybindの設定
+- [ ] zellijの設定
+    - [ ] keybindsをnvimに合わせる
 - [ ] Hammerspoonの使い方の調査
 - [ ] Lazygit内でaicommitsを実行できるようにする
 
