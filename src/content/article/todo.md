@@ -26,6 +26,7 @@ updatedAt: 2024-10-19
 ## Nix
 
 - [ ] 自動updateの設定
+- [ ] .config dirの設定の統一
 
 ## Tool
 
