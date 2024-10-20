@@ -1,0 +1,17 @@
+---
+import type { ComponentProps } from '@/types';
+
+export type IconLinkProps = ComponentProps & {
+  href: string;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+type Props = IconLinkProps;
+const { href, src, alt, width, height, class: className } = Astro.props;
+---
+
+<a href={href} class={className}>
+  <img src={src} alt={alt} width={width} height={height} />
+</a>
