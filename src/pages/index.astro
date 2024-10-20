@@ -3,6 +3,7 @@ import ZennArticleList from '@/components/domain/zenn-article/molecules/ZennArti
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { MoveRight } from 'lucide-react';
 import Heading from './_components/atoms/Heading.astro';
+import IconLink from '@/components/base/atoms/IconLink.astro';
 ---
 
 <BaseLayout>
@@ -12,18 +13,79 @@ import Heading from './_components/atoms/Heading.astro';
   </div>
   <hr class="~mx-2/8" />
   <div class="~px-2/8 ~py-4/8 space-y-4">
-    <Heading level="h2" title="最近の活動" subTitle="さいきんのかつどう" />
     <div>
-      <Heading level="h3" title="技術記事" subTitle="わたしがかきました" />
-      <ZennArticleList class="~m-2/4" />
+      <Heading
+        level="h2"
+        title="My技術トレンド"
+        subTitle="これにはまってます"
+      />
+      <ul class="flex items-center ~gap-4/16">
+        <li>
+          <IconLink
+            href="https://github.com/neovim/neovim"
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg"
+            alt="Neovim"
+            width={100}
+            height={100}
+            class="block scale-90 ~w-12/24"
+          />
+        </li>
+        <li>
+          <IconLink
+            href="https://nixos.org/"
+            src="https://raw.githubusercontent.com/NixOS/nixos-artwork/35ebbbf01c3119005ed180726c388a01d4d1100c/logo/nix-snowflake.svg"
+            alt="Nix"
+            width={100}
+            height={100}
+            class="block ~w-12/24"
+          />
+        </li>
+        <li>
+          <IconLink
+            href="https://github.com/wez/wezterm"
+            src="https://raw.githubusercontent.com/wez/wezterm/main/assets/icon/wezterm-icon.svg"
+            alt="WezTerm"
+            width={100}
+            height={100}
+            class="block ~w-12/24"
+          />
+        </li>
+        <li>
+          <IconLink
+            href="https://github.com/zellij-org/zellij?tab=readme-ov-file"
+            src="https://raw.githubusercontent.com/zellij-org/zellij/main/assets/logo.png"
+            alt="Zellij"
+            width={100}
+            height={100}
+            class="block ~w-12/24"
+          />
+        </li>
+        <li>
+          <IconLink
+            href="https://github.com/withastro/astro"
+            src="https://github.com/user-attachments/assets/2a2986bd-47cf-4243-b588-6dd719dd3958"
+            alt="Astro"
+            width={100}
+            height={100}
+            class="block scale-75 ~w-12/24"
+          />
+        </li>
+      </ul>
     </div>
     <div>
-      <Heading level="h3" title="TODO" subTitle="やりたいこと" />
-      <a
-        href="/todo"
-        class="flex items-center ~text-xl/3xl font-bold text-rosePineDawn-pine underline ~m-2/4 w-fit"
-        ><MoveRight className="translate-y-0.5" />TODO</a
-      >
+      <Heading level="h2" title="最近の活動" subTitle="さいきんのかつどう" />
+      <div>
+        <Heading level="h3" title="技術記事" subTitle="わたしがかきました" />
+        <ZennArticleList class="~m-2/4" />
+      </div>
+      <div>
+        <Heading level="h3" title="TODO" subTitle="やりたいこと" />
+        <a
+          href="/todo"
+          class="flex items-center ~text-xl/3xl font-bold text-rosePineDawn-pine underline ~m-2/4 w-fit"
+          ><MoveRight className="translate-y-0.5" />TODO</a
+        >
+      </div>
     </div>
   </div>
 </BaseLayout>
