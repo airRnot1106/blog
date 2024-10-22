@@ -3,7 +3,7 @@ title: 'TODO'
 subTitle: 'やりたいこと'
 description: 'やりたいことをまとめた場所です'
 publishedAt: 2024-10-06
-updatedAt: 2024-10-21
+updatedAt: 2024-10-22
 ---
 
 ## Neovim
@@ -38,7 +38,7 @@ updatedAt: 2024-10-21
 - [ ] zellijの設定
     - [ ] keybindsをnvimに合わせる
 - [ ] Hammerspoonの使い方の調査
-- [ ] Lazygit内でaicommitsを実行できるようにする
+- [x] Lazygit内でaicommitsを実行できるようにする
 
 ## other
 
