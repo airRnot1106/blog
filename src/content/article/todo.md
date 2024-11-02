@@ -3,7 +3,7 @@ title: 'TODO'
 subTitle: 'やりたいこと'
 description: 'やりたいことをまとめた場所です'
 publishedAt: 2024-10-06
-updatedAt: 2024-10-26
+updatedAt: 2024-11-02
 ---
 
 ## Neovim
@@ -16,31 +16,22 @@ updatedAt: 2024-10-26
 
 ### Plugin
 
-- [x] fuzzy finder系pluginの設定
-- [x] mini.filesで開いているbufferを起点に展開するように変更
+- [ ] noiceで不要な通知のフィルターを設定する
+
 
 ### Keymap
 
-- [x] 参照と定義のジャンプの設定
 
 ## Nix
 
 - [ ] 自動updateの設定
-- [ ] .config dirの設定の統一
+- [x] nixpkgsにコントリビューションする
 
 ## Tool
 
-- [x] Warp以外のTerminalの検討
-    - [x] Alacritty vs WezTerm
-        - WezTermで決定
-- [x] WezTermの設定
-    - [x] keybindの設定
-- [x] zellijの設定
-    - [x] keybindsをnvimに合わせる
-- [ ] Hammerspoonの使い方の調査
-- [x] Lazygit内でaicommitsを実行できるようにする
+## Article
+
+- [ ] Lazygitでaicommitsを使う方法
 
 ## other
 
-- [x] Nix meetup #1のポジションシートを書く
-- [x] blogにトレンド技術をまとめる
