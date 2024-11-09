@@ -34,8 +34,6 @@ updatedAt: 2024-11-09
 
 ## Tool
 
-- [ ] WezTermで画面上のURLをクリックで開けるようにする
-
 ## Article
 
 - [ ] Lazygitでaicommitsを使う方法
