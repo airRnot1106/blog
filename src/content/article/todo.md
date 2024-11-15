@@ -3,7 +3,7 @@ title: 'TODO'
 subTitle: 'やりたいこと'
 description: 'やりたいことをまとめた場所です'
 publishedAt: 2024-10-06
-updatedAt: 2024-11-09
+updatedAt: 2024-11-15
 ---
 
 ## Neovim
@@ -20,12 +20,10 @@ updatedAt: 2024-11-09
 
 - [ ] noiceで不要な通知のフィルターを設定する
     - [ ] formatできなかったときの通知
+- [ ] lazygit.nvimから直接ファイルを開けるようにする
 
 
 ### Keymap
-
-- [x] CamelCaseに対応する
-
 
 ## Nix
 
@@ -37,6 +35,7 @@ updatedAt: 2024-11-09
 ## Article
 
 - [ ] Lazygitでaicommitsを使う方法
+- [x] nix-initを使って簡単にNixでパッケージングを行う
 
 ## other
 
