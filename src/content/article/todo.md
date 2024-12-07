@@ -3,7 +3,7 @@ title: 'TODO'
 subTitle: 'やりたいこと'
 description: 'やりたいことをまとめた場所です'
 publishedAt: 2024-10-06
-updatedAt: 2024-11-15
+updatedAt: 2024-12-08
 ---
 
 ## Neovim
@@ -14,7 +14,7 @@ updatedAt: 2024-11-15
 - [ ] vue用の設定
 - [ ] ts_lsとtailwindcss_lspが競合する問題の解消
 - [ ] format on saveの動作が不安定な問題の解消
-- [ ] spellcheckの設定
+- [x] spellcheckの設定
 
 ### Plugin
 
