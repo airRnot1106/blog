@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:markup": "markuplint 'src/**/*.{html,jsx,tsx,mdx}'",
     "check": "biome check --write ."
   },
   "dependencies": {
@@ -17,6 +18,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@eslint/eslintrc": "^3",
+    "@markuplint/jsx-parser": "^4.7.18",
+    "@markuplint/react-spec": "^4.5.18",
     "@tailwindcss/postcss": "^4",
     "@tsconfig/strictest": "^2.0.5",
     "@types/node": "^20",
@@ -24,10 +27,14 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
+    "markuplint": "^4.11.8",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["sharp"]
+    "onlyBuiltDependencies": [
+      "es5-ext",
+      "sharp"
+    ]
   }
 }
