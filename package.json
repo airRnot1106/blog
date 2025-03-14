@@ -30,6 +30,7 @@
     "daisyui": "^5.0.4",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
+    "eslint-plugin-tailwindcss": "^3.18.0",
     "husky": "^9.1.7",
     "markuplint": "^4.11.8",
     "tailwindcss": "^4",
