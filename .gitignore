@@ -44,3 +44,5 @@ next-env.d.ts
 *.woff
 *.woff2
 *.ttf
+
+*storybook.log

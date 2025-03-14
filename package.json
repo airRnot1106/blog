@@ -9,7 +9,10 @@
     "lint": "next lint",
     "lint:markup": "markuplint 'src/**/*.{html,jsx,tsx,mdx}'",
     "check": "biome check --write .",
-    "prepare": "./scripts/font-download.sh && husky"
+    "prepare": "./scripts/font-download.sh && husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest"
   },
   "dependencies": {
     "lucide-react": "^0.481.0",
@@ -20,28 +23,48 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@chromatic-com/storybook": "^3.2.5",
     "@eslint/eslintrc": "^3",
     "@markuplint/jsx-parser": "^4.7.18",
     "@markuplint/react-spec": "^4.5.18",
+    "@storybook/addon-a11y": "^8.6.4",
+    "@storybook/addon-essentials": "^8.6.4",
+    "@storybook/addon-onboarding": "^8.6.4",
+    "@storybook/blocks": "^8.6.4",
+    "@storybook/experimental-addon-test": "^8.6.4",
+    "@storybook/experimental-nextjs-vite": "8.6.4",
+    "@storybook/react": "^8.6.4",
+    "@storybook/test": "^8.6.4",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.16",
     "@tsconfig/strictest": "^2.0.5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/browser": "^3.0.8",
+    "@vitest/coverage-v8": "^3.0.8",
     "daisyui": "^5.0.4",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
+    "eslint-plugin-storybook": "^0.11.4",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "husky": "^9.1.7",
     "markuplint": "^4.11.8",
+    "playwright": "^1.51.0",
+    "storybook": "^8.6.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^3.0.8"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "es5-ext",
       "sharp"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
     ]
   }
 }
