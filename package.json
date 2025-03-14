@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lint:markup": "markuplint 'src/**/*.{html,jsx,tsx,mdx}'",
     "check": "biome check --write .",
-    "prepare": "husky"
+    "prepare": "./scripts/font-download.sh && husky"
   },
   "dependencies": {
     "lucide-react": "^0.481.0",
@@ -39,6 +39,9 @@
     "typescript": "^5"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["es5-ext", "sharp"]
+    "onlyBuiltDependencies": [
+      "es5-ext",
+      "sharp"
+    ]
   }
 }
