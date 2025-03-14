@@ -1,15 +1,26 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
+  variable: '--font-noto-sans',
+  weight: 'variable',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const mono = Noto_Sans_JP({
   subsets: ['latin'],
+  variable: '--font-mono-sans',
+  weight: 'variable',
+  display: 'swap',
+});
+
+const ich1q = localFont({
+  src: './ich1Q-hand-Regular.ttf',
+  variable: '--font-ich1q',
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -23,9 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${notoSans.variable} ${mono.variable} ${ich1q.variable} font-sans`}
       >
         {children}
       </body>
