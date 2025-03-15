@@ -26,6 +26,8 @@
   --color-warning-content: #6a3300;
   --color-error: #b4637a;
   --color-error-content: #2d0000;
+  --color-muted: #9893a5;
+  --color-subtle: #797593;
   --radius-selector: 0.5rem;
   --radius-field: 0.25rem;
   --radius-box: 0.5rem;
@@ -60,6 +62,8 @@
   --color-warning-content: #744e03;
   --color-error: #eb6f92;
   --color-error-content: #660025;
+  --color-muted: #6e6a86;
+  --color-subtle: #908caa;
   --radius-selector: 0.5rem;
   --radius-field: 0.25rem;
   --radius-box: 0.5rem;
@@ -74,4 +78,7 @@
   --font-sans: var(--font-noto-sans);
   --font-mono: var(--font-moto-sans);
   --font-ich1q: var(--font-ich1q);
+
+  --color-muted: var(--color-muted);
+  --color-subtle: var(--color-subtle);
 }
