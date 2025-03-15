@@ -1,11 +1,15 @@
-import type { ComponentProps } from 'react';
+import type { ComponentProps, FC } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export type SiteFooterProps = Readonly<ComponentProps<'footer'>>;
 
-export const SiteFooter = ({ className, ...rest }: SiteFooterProps) => {
+export const SiteFooter: FC<SiteFooterProps> = ({ className, ...rest }) => {
   return (
     <footer
-      className="grid grid-cols-1 items-center justify-items-center py-2 border-t border-muted/20"
+      className={twMerge(
+        'grid grid-cols-1 items-center justify-items-center py-2 border-t border-muted/20',
+        className,
+      )}
       {...rest}
     >
       <p className="text-xs font-normal text-center">

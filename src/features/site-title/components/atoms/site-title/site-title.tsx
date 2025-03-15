@@ -1,4 +1,5 @@
-import type { ComponentProps } from 'react';
+import type { ComponentProps, FC } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export type SiteTitleProps = Readonly<
   ComponentProps<'div'> & {
@@ -7,15 +8,18 @@ export type SiteTitleProps = Readonly<
   }
 >;
 
-export const SiteTitle = ({
+export const SiteTitle: FC<SiteTitleProps> = ({
   title,
   subtitle,
   className,
   ...rest
-}: SiteTitleProps) => {
+}) => {
   return (
     <div
-      className="flex flex-col items-center justify-center gap-y-[clamp(0.25rem,-0.023rem_+_1.36vw,1rem)] font-ich1q"
+      className={twMerge(
+        'flex flex-col items-center justify-center gap-y-[clamp(0.25rem,-0.023rem_+_1.36vw,1rem)] font-ich1q',
+        className,
+      )}
       {...rest}
     >
       <h1 className="text-[clamp(2.25rem,0.886rem_+_6.82vw,6rem)] font-bold">

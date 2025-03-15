@@ -1,12 +1,16 @@
 import Link from 'next/link';
 import type { ComponentProps, FC } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export type SiteHeaderProps = Readonly<ComponentProps<'header'>>;
 
 export const SiteHeader: FC<SiteHeaderProps> = ({ className, ...rest }) => {
   return (
     <header
-      className="@container grid grid-cols-[auto_auto] items-center justify-between px-4 py-2 border-b border-muted/20"
+      className={twMerge(
+        '@container grid grid-cols-[auto_auto] items-center justify-between px-4 py-2 border-b border-muted/20',
+        className,
+      )}
       {...rest}
     >
       <Link
