@@ -1,6 +1,6 @@
-import type { ComponentPropsWithoutRef } from 'react';
+import type { ComponentProps } from 'react';
 
-export type SiteFooterProps = Readonly<ComponentPropsWithoutRef<'footer'>>;
+export type SiteFooterProps = Readonly<ComponentProps<'footer'>>;
 
 export const SiteFooter = ({ className, ...rest }: SiteFooterProps) => {
   return (

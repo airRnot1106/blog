@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import type { ComponentPropsWithoutRef, FC } from 'react';
+import type { ComponentProps, FC } from 'react';
 
-export type SiteHeaderProps = Readonly<ComponentPropsWithoutRef<'header'>>;
+export type SiteHeaderProps = Readonly<ComponentProps<'header'>>;
 
 export const SiteHeader: FC<SiteHeaderProps> = ({ className, ...rest }) => {
   return (
