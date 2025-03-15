@@ -1,20 +1,6 @@
 import type { Metadata } from 'next';
-import { Zen_Kaku_Gothic_New } from 'next/font/google';
-import localFont from 'next/font/local';
+import { ich1q, zenkaku } from './fonts';
 import './globals.css';
-
-const zenkaku = Zen_Kaku_Gothic_New({
-  subsets: ['latin'],
-  variable: '--font-zenkaku',
-  weight: ['300', '500', '900'],
-  display: 'swap',
-});
-
-const ich1q = localFont({
-  src: './ich1Q-hand-Regular.ttf',
-  variable: '--font-ich1q',
-  adjustFontFallback: false,
-});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
