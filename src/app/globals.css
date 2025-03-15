@@ -75,8 +75,7 @@
 }
 
 @theme {
-  --font-sans: var(--font-noto-sans);
-  --font-mono: var(--font-moto-sans);
+  --font-zenkaku: var(--font-zenkaku);
   --font-ich1q: var(--font-ich1q);
 
   --color-muted: var(--color-muted);

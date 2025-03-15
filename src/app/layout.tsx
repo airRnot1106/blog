@@ -1,19 +1,12 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_JP } from 'next/font/google';
+import { Zen_Kaku_Gothic_New } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 
-const notoSans = Noto_Sans_JP({
+const zenkaku = Zen_Kaku_Gothic_New({
   subsets: ['latin'],
-  variable: '--font-noto-sans',
-  weight: 'variable',
-  display: 'swap',
-});
-
-const mono = Noto_Sans_JP({
-  subsets: ['latin'],
-  variable: '--font-mono-sans',
-  weight: 'variable',
+  variable: '--font-zenkaku',
+  weight: ['300', '500', '900'],
   display: 'swap',
 });
 
@@ -35,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body
-        className={`${notoSans.variable} ${mono.variable} ${ich1q.variable} font-sans`}
-      >
+      <body className={`${zenkaku.variable} ${ich1q.variable} font-zenkaku`}>
         {children}
       </body>
     </html>
