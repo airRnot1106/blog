@@ -9,6 +9,13 @@ const meta: Meta<typeof ZennArticleSectionPresentational> = {
   parameters: {
     layout: 'fullscreen',
   },
+  decorators: [
+    (Story) => (
+      <div className="p-4">
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default meta;
