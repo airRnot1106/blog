@@ -16,7 +16,10 @@ export const ZennArticleCardList: FC<ZennArticleCardListProps> = ({
 }) => {
   return (
     <ul
-      className={twMerge('carousel carousel-center gap-x-8', className)}
+      className={twMerge(
+        'carousel carousel-center gap-x-[clamp(1rem,0.818rem_+_0.91vw,1.5rem)]',
+        className,
+      )}
       {...rest}
     >
       {articles.map((article) => (

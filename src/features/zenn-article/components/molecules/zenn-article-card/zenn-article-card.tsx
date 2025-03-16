@@ -16,10 +16,7 @@ export const ZennArticleCard: FC<ZennArticleCardProps> = ({
   ...rest
 }) => {
   return (
-    <article
-      className={twMerge('inline-grid rounded-3xl', className)}
-      {...rest}
-    >
+    <article className={twMerge('inline-grid', className)} {...rest}>
       <Link href={article.url}>
         <Image
           src={article.imageUrl}
@@ -27,7 +24,7 @@ export const ZennArticleCard: FC<ZennArticleCardProps> = ({
           height="630"
           alt={article.title}
           priority
-          className="rounded-3xl"
+          className="w-[clamp(12.5rem,7.955rem_+_22.73vw,25rem)] rounded-[clamp(0.5rem,0.318rem_+_0.91vw,1rem)]"
         />
       </Link>
     </article>
