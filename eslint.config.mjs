@@ -3,7 +3,6 @@ import { fileURLToPath } from 'node:url';
 import { FlatCompat } from '@eslint/eslintrc';
 import pluginVitest from '@vitest/eslint-plugin';
 import pluginStorybook from 'eslint-plugin-storybook';
-import pluginTailwind from 'eslint-plugin-tailwindcss';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,7 +16,7 @@ const eslintConfig = [
   {
     files: ['*.{spec,test}.{js,jsx,ts,tsx}'],
     plugins: {
-      vitest,
+      pluginVitest,
     },
     rules: {
       ...pluginVitest.configs.recommended.rules, // you can also use vitest.configs.all.rules to enable all rules
@@ -66,7 +65,6 @@ const eslintConfig = [
     },
   },
   ...pluginStorybook.configs['flat/recommended'],
-  ...pluginTailwind.configs['flat/recommended'],
 ];
 
 export default eslintConfig;
