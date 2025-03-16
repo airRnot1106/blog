@@ -21,7 +21,7 @@ export const ZennArticleSectionPresentational: FC<
       )}
       {...rest}
     >
-      <Heading title="最新記事" subtitle="さいしんきじ" as="h2" />
+      <Heading title="技術記事" subtitle="わたしがかきました" as="h2" />
       <div className="flex flex-col gap-y-4 items-center">
         {articles != null ? (
           <ZennArticleCardList
@@ -30,7 +30,7 @@ export const ZennArticleSectionPresentational: FC<
           />
         ) : (
           <p className="py-[clamp(3rem,1.909rem_+_5.45vw,6rem)]">
-            記事がありません
+            記事の取得に失敗しました 😢
           </p>
         )}
       </div>
