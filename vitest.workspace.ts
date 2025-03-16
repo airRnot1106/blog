@@ -28,6 +28,9 @@ export default defineWorkspace([
         instances: [{ browser: 'chromium' }],
       },
       setupFiles: ['.storybook/vitest.setup.ts'],
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
     },
   },
 ]);
