@@ -1,1 +1,1 @@
-export * from './zenn-article-section-container';
+export * from './zenn-article-section';

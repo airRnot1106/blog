@@ -1,10 +1,11 @@
 import { articles } from '@/features/zenn-article/mocks';
 import type { Meta, StoryObj } from '@storybook/react';
-import { ZennArticleCardList } from './zenn-article-card-list';
+import { ZennArticleCardListPresentational } from './zenn-article-card-list-presentational';
 
-const meta: Meta<typeof ZennArticleCardList> = {
-  title: 'Features/ZennArticle/Components/Molecules/ZennArticleCardList',
-  component: ZennArticleCardList,
+const meta: Meta<typeof ZennArticleCardListPresentational> = {
+  title:
+    'Features/ZennArticle/Components/Molecules/ZennArticleCardListPresentational',
+  component: ZennArticleCardListPresentational,
   parameters: {
     layout: 'fullscreen',
   },
@@ -12,7 +13,7 @@ const meta: Meta<typeof ZennArticleCardList> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ZennArticleCardList>;
+type Story = StoryObj<typeof ZennArticleCardListPresentational>;
 
 export const Default: Story = {
   args: {

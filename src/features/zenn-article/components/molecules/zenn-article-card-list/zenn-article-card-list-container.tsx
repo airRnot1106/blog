@@ -1,18 +1,18 @@
 import { getZennArticleWithOgpListByUsername } from '@/features/zenn-article/actions';
 import { convertGetZennArticleWithOgpListByUsernameResponseToZennArticleList } from '@/features/zenn-article/converters';
-import type { ComponentProps } from 'react';
-import { ZennArticleSectionPresentational } from './zenn-article-section-presentational';
+import type { ComponentProps, FC } from 'react';
+import { ZennArticleCardListPresentational } from './zenn-article-card-list-presentational';
 
-export type ZennArticleSectionProps = Readonly<
-  ComponentProps<'section'> & {
+export type ZennArticleCardListProps = Readonly<
+  ComponentProps<'ul'> & {
     username: string;
   }
 >;
 
-export const ZennArticleSection = async ({
+export const ZennArticleCardList: FC<ZennArticleCardListProps> = async ({
   username,
   ...rest
-}: ZennArticleSectionProps) => {
+}) => {
   const articles = await (async () => {
     const result = await getZennArticleWithOgpListByUsername(username);
     if (!result.ok) {
@@ -24,5 +24,11 @@ export const ZennArticleSection = async ({
     );
   })();
 
-  return <ZennArticleSectionPresentational articles={articles} {...rest} />;
+  return articles != null ? (
+    <ZennArticleCardListPresentational articles={articles} {...rest} />
+  ) : (
+    <p className="py-[clamp(3rem,1.909rem_+_5.45vw,6rem)]">
+      記事の取得に失敗しました 😢
+    </p>
+  );
 };

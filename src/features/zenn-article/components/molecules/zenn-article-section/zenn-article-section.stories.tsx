@@ -1,11 +1,9 @@
-import { articles } from '@/features/zenn-article/mocks';
 import type { Meta, StoryObj } from '@storybook/react';
-import { ZennArticleSectionPresentational } from './zenn-article-section-presentational';
+import { ZennArticleSection } from './zenn-article-section';
 
-const meta: Meta<typeof ZennArticleSectionPresentational> = {
-  title:
-    'Features/ZennArticle/Components/Molecules/ZennArticleSectionPresentational',
-  component: ZennArticleSectionPresentational,
+const meta: Meta<typeof ZennArticleSection> = {
+  title: 'Features/ZennArticle/Components/Molecules/ZennArticleSection',
+  component: ZennArticleSection,
   parameters: {
     layout: 'fullscreen',
   },
@@ -20,16 +18,10 @@ const meta: Meta<typeof ZennArticleSectionPresentational> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ZennArticleSectionPresentational>;
+type Story = StoryObj<typeof ZennArticleSection>;
 
 export const Default: Story = {
   args: {
-    articles,
-  },
-};
-
-export const Filled: Story = {
-  args: {
-    articles: undefined,
+    username: 'example',
   },
 };

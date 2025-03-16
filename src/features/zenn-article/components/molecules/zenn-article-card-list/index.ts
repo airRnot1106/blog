@@ -1,1 +1,1 @@
-export * from './zenn-article-card-list';
+export * from './zenn-article-card-list-container';

@@ -3,17 +3,15 @@ import type { ComponentProps, FC } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { ZennArticleCard } from '../zenn-article-card/zenn-article-card';
 
-export type ZennArticleCardListProps = Readonly<
+export type ZennArticleCardListPresentationalProps = Readonly<
   ComponentProps<'ul'> & {
     articles: ZennArticle[];
   }
 >;
 
-export const ZennArticleCardList: FC<ZennArticleCardListProps> = ({
-  articles,
-  className,
-  ...rest
-}) => {
+export const ZennArticleCardListPresentational: FC<
+  ZennArticleCardListPresentationalProps
+> = ({ articles, className, ...rest }) => {
   return (
     <ul
       className={twMerge(
