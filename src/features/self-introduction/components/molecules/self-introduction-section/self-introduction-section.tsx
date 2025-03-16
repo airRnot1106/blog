@@ -28,10 +28,12 @@ export const SelfIntroductionSection: FC<SelfIntroductionSectionProps> = ({
         <p className="text-[clamp(1.5rem,1.227rem_+_1.36vw,2.25rem)] font-bold">
           airRnot
         </p>
-        <p className="text-[clamp(0.75rem,0.614rem_+_0.68vw,1.125rem)] text-center">
+        <p className="text-[clamp(0.75rem,0.614rem_+_0.68vw,1.125rem)] text-center break-keep">
           フロントエンドをメインにやっています
           <br />
-          趣味はdotfiles盆栽とディレクトリ構造について考えることです
+          趣味はdotfiles盆栽とディレクトリ構造について
+          <wbr />
+          考えることです
         </p>
         <div className="border-t border-t-muted/20 w-[min(40rem,80%)]" />
         <nav>
