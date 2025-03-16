@@ -13,7 +13,7 @@ export default function Home() {
           className="py-[clamp(2rem,1.273rem_+_3.64vw,4rem)] border-b border-b-muted/20"
         />
         <SelfIntroductionSection />
-        <ZennArticleSection username="airrnot1106" />
+        <ZennArticleSection username="airrnot1106" className="mb-12" />
       </div>
     </SiteLayout>
   );
