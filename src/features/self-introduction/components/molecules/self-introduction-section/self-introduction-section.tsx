@@ -21,6 +21,7 @@ export const SelfIntroductionSection: FC<SelfIntroductionSectionProps> = ({
               width="288"
               height="288"
               alt=""
+              priority
             />
           </div>
         </div>
