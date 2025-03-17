@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   return (
-    <SiteLayout className="grid grid-cols-[5%_[content-start]_1fr_[content-end]_5%] justify-start">
+    <SiteLayout className="grid grid-cols-[2%_[content-start]_1fr_[content-end]_2%] sm:grid-cols-[5%_[content-start]_1fr_[content-end]_5%] justify-start">
       <div className="grid col-[content] content-start gap-y-[clamp(1rem,0.636rem_+_1.82vw,2rem)]">
         <SiteTitle
           title="airRnot.dev"

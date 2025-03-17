@@ -18,7 +18,7 @@ export const SiteTitle: FC<SiteTitleProps> = memo(
         )}
         {...rest}
       >
-        <h1 className="text-[clamp(2.25rem,0.886rem_+_6.82vw,6rem)] font-bold">
+        <h1 className="text-[clamp(2rem,0.545rem_+_7.27vw,6rem)] atext-[clamp(2.25rem,0.886rem_+_6.82vw,6rem)] font-bold">
           {title}
         </h1>
         <span className="text-[clamp(1rem,0.545rem_+_2.27vw,2.25rem)]">
