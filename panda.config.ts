@@ -31,6 +31,10 @@ export default defineConfig({
           'highlight-med': { value: 'var(--colors-highlight-med)' },
           'highlight-high': { value: 'var(--colors-highlight-high)' },
         },
+        fonts: {
+          zenkaku: { value: 'var(--fonts-zenkaku)' },
+          ich1q: { value: 'var(--fonts-ich1q)' },
+        },
         fontSizes: {
           xs: { value: 'var(--font-sizes-xs)' },
           sm: { value: 'var(--font-sizes-sm)' },

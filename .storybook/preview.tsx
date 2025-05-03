@@ -1,6 +1,7 @@
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import type { Preview } from '@storybook/react';
 import React from 'react';
+import { ich1q, zenkaku } from '../src/app/fonts';
 import { SiteThemeProvider } from '../src/features/site-theme/providers';
 
 import '../src/app/globals.css';
@@ -73,6 +74,7 @@ const preview: Preview = {
     (Story) => (
       <SiteThemeProvider>
         <div
+          className={`${zenkaku.className} ${ich1q.variable}`}
           style={{
             color: 'var(--colors-text)',
             backgroundColor: 'var(--colors-base)',
