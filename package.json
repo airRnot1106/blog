@@ -5,7 +5,8 @@
   "scripts": {
     "prepare": "panda codegen",
     "dev": "next dev",
-    "build": "next build",
+    "prebuild": "./scripts/download-font.sh",
+    "build": "pnpm prebuild && next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
     "test": "vitest",
@@ -15,7 +16,7 @@
     "check": "biome check --write .",
     "scaffold": "scaffdog generate",
     "storybook": "storybook dev -p 6006 --no-open",
-    "build-storybook": "storybook build"
+    "build-storybook": "pnpm prebuild && storybook build"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
