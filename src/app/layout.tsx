@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { css } from '../../styled-system/css';
 import { SiteLayout } from '../features/site/components/molecules/site-layout';
 import { SiteThemeProvider } from '../features/site-theme/providers';
+import { ich1q, zenkaku } from './fonts';
 
 import './globals.css';
-import { ich1q, zenkaku } from './fonts';
 
 export const metadata: Metadata = {
   title: 'airRnot.dev',
@@ -17,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${zenkaku.className} ${ich1q.variable}`}>
+      <body
+        className={`${zenkaku.className} ${ich1q.variable} ${css({
+          color: 'text',
+          backgroundColor: 'base',
+        })}`}
+      >
         <SiteThemeProvider>
           <SiteLayout>{children}</SiteLayout>
         </SiteThemeProvider>
