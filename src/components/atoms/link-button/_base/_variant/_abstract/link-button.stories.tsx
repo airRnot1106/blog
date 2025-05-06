@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { ArrowRight } from 'lucide-react';
 import { css } from '../../../../../../../styled-system/css';
 import { LinkButton } from './link-button';
 
@@ -56,6 +57,24 @@ export const Size: Story = {
           ),
         )}
       </ul>
+    );
+  },
+};
+
+export const Icon: Story = {
+  render: () => {
+    return (
+      <LinkButton
+        className={css({
+          columnGap: '0.25rem',
+        })}
+        href="#"
+        icon={<ArrowRight />}
+        iconPosition="right"
+        size="md"
+      >
+        もっとみる
+      </LinkButton>
     );
   },
 };
