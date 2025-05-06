@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime-DoEZbXM1.js";import{E as s}from"./error-fetch-result-message-B606tqBM.js";const r=e=>{switch(e.variant){case"error":return t.jsx(s,{...e});default:return e.variant}};r.__docgenInfo={description:"",methods:[],displayName:"FetchResultMessage"};export{r as F};
