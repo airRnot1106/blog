@@ -5,6 +5,7 @@ export const buttonRecipe = cva({
     display: 'inline-grid',
     gridAutoFlow: 'column',
     alignItems: 'center',
+    textBox: 'trim-both cap alphabetic',
     cursor: 'pointer',
     '--size-base': '0.25rem',
     _disabled: {
