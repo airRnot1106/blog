@@ -1,90 +1,77 @@
-import Image from 'next/image';
+import { css } from '../../styled-system/css';
+import { LatestArticleCardList } from '../features/article/components/molecules/latest-article-card-list';
+import { LatestArticleSection } from '../features/article/components/molecules/latest-article-section';
+import { AttendedEventSection } from '../features/attended-event/components/molecules/attended-event-section';
+import { LaprasImage } from '../features/lapras/components/atoms/lapras-image';
+import { LaprasSection } from '../features/lapras/components/molecules/lapras-section';
+import { ProfileSection } from '../features/profile/components/molecules/profile-section';
 
 export default function Home() {
   return (
-    <div>
-      <main>
-        <Image
-          alt="Next.js logo"
-          height={38}
-          priority
-          src="/next.svg"
-          width={180}
+    <main
+      className={css({
+        display: 'grid',
+        gridTemplateColumns: '5% [content-start] 1fr [content-end] 5%',
+        marginBottom: '2rem',
+      })}
+    >
+      <div
+        className={css({
+          gridColumn: 'content',
+        })}
+      >
+        <hgroup
+          className={css({
+            display: 'grid',
+            gridAutoFlow: 'row',
+            justifyItems: 'center',
+            rowGap: 'clamp(0.5rem, 0.273rem + 0.97vw, 1rem)',
+            fontFamily: 'ich1q',
+            paddingBlock: 'clamp(1rem, -0.364rem + 5.82vw, 4rem)',
+            borderBottom: '1px solid',
+            borderBottomColor: 'muted/20',
+          })}
+        >
+          <h1
+            className={css({
+              fontSize: 'clamp(2rem, 0.182rem + 7.76vw, 6rem)',
+            })}
+          >
+            airRnot.dev
+          </h1>
+          <p
+            className={css({
+              fontSize: 'clamp(1rem, 0.432rem + 2.42vw, 2.25rem)',
+            })}
+          >
+            airRnot's blog
+          </p>
+        </hgroup>
+        <ProfileSection
+          className={css({
+            marginTop: '2rem',
+          })}
         />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div>
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Image
-              alt="Vercel logomark"
-              height={20}
-              src="/vercel.svg"
-              width={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          rel="noopener noreferrer"
-          target="_blank"
+        <LatestArticleSection
+          className={css({
+            marginTop: '2rem',
+          })}
         >
-          <Image
-            alt="File icon"
-            aria-hidden
-            height={16}
-            src="/file.svg"
-            width={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          rel="noopener noreferrer"
-          target="_blank"
+          <LatestArticleCardList />
+        </LatestArticleSection>
+        <LaprasSection
+          className={css({
+            marginTop: '2rem',
+          })}
         >
-          <Image
-            alt="Window icon"
-            aria-hidden
-            height={16}
-            src="/window.svg"
-            width={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Image
-            alt="Globe icon"
-            aria-hidden
-            height={16}
-            src="/globe.svg"
-            width={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <LaprasImage />
+        </LaprasSection>
+        <AttendedEventSection
+          className={css({
+            marginTop: '2rem',
+          })}
+        />
+      </div>
+    </main>
   );
 }
