@@ -17,6 +17,10 @@ const nextConfig: NextConfig = withBundleAnalyzer({
         protocol: 'https',
         hostname: 'res.cloudinary.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'media.lapras.com',
+      },
     ],
   },
   webpack(config) {
