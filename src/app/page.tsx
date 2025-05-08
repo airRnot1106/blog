@@ -5,21 +5,12 @@ import { AttendedEventSection } from '../features/attended-event/components/mole
 import { LaprasImage } from '../features/lapras/components/atoms/lapras-image';
 import { LaprasSection } from '../features/lapras/components/molecules/lapras-section';
 import { ProfileSection } from '../features/profile/components/molecules/profile-section';
+import { SiteContentLayout } from '../features/site-content/components/molecules/site-content-layout';
 
 export default function Home() {
   return (
-    <main
-      className={css({
-        display: 'grid',
-        gridTemplateColumns: '5% [content-start] 1fr [content-end] 5%',
-        marginBottom: '2rem',
-      })}
-    >
-      <div
-        className={css({
-          gridColumn: 'content',
-        })}
-      >
+    <SiteContentLayout>
+      <main>
         <hgroup
           className={css({
             display: 'grid',
@@ -71,7 +62,7 @@ export default function Home() {
             marginTop: '2rem',
           })}
         />
-      </div>
-    </main>
+      </main>
+    </SiteContentLayout>
   );
 }
