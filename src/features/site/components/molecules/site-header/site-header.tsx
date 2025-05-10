@@ -1,3 +1,4 @@
+import { Rss } from 'lucide-react';
 import Link from 'next/link';
 import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
@@ -49,9 +50,9 @@ export const SiteHeader: FC<SiteHeaderProps> = ({ className, ...rest }) => {
           display: 'grid',
           gridAutoFlow: 'column',
           alignItems: 'center',
-          gap: {
-            base: '0.5rem',
-            sm: '1rem',
+          columnGap: {
+            base: '0.25rem',
+            sm: '0.5rem',
           },
           '& > li': {
             display: 'grid',
@@ -74,9 +75,14 @@ export const SiteHeader: FC<SiteHeaderProps> = ({ className, ...rest }) => {
               className={css({
                 fill: 'currentColor',
               })}
-              height="36"
-              width="36"
+              height="28"
+              width="28"
             />
+          </LinkButton>
+        </li>
+        <li>
+          <LinkButton href="/articles/feed.xml" size="md" variant="ghost">
+            <Rss aria-label="RSS" size="28" />
           </LinkButton>
         </li>
       </ul>
