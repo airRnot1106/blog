@@ -3,8 +3,10 @@ import { z } from 'zod';
 export const articleSchema = z.object({
   id: z.string(),
   title: z.string(),
-  url: z.string().url(),
-  createdAt: z.string().datetime(),
+  href: z.string(),
+  createdAt: z.date(),
+  isExternalSite: z.boolean(),
+  src: z.string(),
 });
 
 export type Article = z.infer<typeof articleSchema>;
