@@ -3,7 +3,6 @@ import { css } from '../../../../../../../styled-system/css';
 import { UnderlineLink } from './underline-link';
 
 const meta: Meta<typeof UnderlineLink> = {
-  title: 'Components/Atoms/Link/_Base/_Variant/Underline/UnderlineLink',
   component: UnderlineLink,
   tags: ['autodocs'],
   parameters: {

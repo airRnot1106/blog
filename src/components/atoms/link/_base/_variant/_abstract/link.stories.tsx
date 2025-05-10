@@ -3,7 +3,6 @@ import { css } from '../../../../../../../styled-system/css';
 import { Link } from './link';
 
 const meta: Meta<typeof Link> = {
-  title: 'Components/Atoms/Link/_Base/_Variant/_Abstract/Link',
   component: Link,
   tags: ['autodocs'],
   parameters: {

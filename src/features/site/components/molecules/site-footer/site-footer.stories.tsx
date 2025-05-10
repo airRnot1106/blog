@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { SiteFooter } from '../site-footer';
 
 const meta: Meta<typeof SiteFooter> = {
-  title: 'Features/Site/Components/Molecules/SiteFooter',
   component: SiteFooter,
   tags: ['autodocs'],
   parameters: {

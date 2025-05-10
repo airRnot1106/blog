@@ -4,8 +4,6 @@ import { headings } from '../../../mocks';
 import { BlogArticleTocNavigationSectionPresentational } from './blog-article-toc-navigation-section.presentational';
 
 const meta: Meta<typeof BlogArticleTocNavigationSectionPresentational> = {
-  title:
-    'Features/BlogArticleToc/Components/Molecules/BlogArticleTocNavigationSection',
   component: BlogArticleTocNavigationSectionPresentational,
   tags: ['autodocs'],
   parameters: {

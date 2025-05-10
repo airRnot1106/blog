@@ -6,7 +6,6 @@ import { blogArticles } from '../../../mocks';
 import { BlogArticleLayout } from './blog-article-layout';
 
 const meta: Meta<typeof BlogArticleLayout> = {
-  title: 'Features/BlogArticle/Components/Molecules/BlogArticleLayout',
   component: BlogArticleLayout,
   tags: ['autodocs'],
   parameters: {

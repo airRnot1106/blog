@@ -4,7 +4,6 @@ import { css } from '../../../../../../../styled-system/css';
 import { NormalLinkButton } from './normal-link-button';
 
 const meta: Meta<typeof NormalLinkButton> = {
-  title: 'Components/Atoms/LinkButton/_Base/_Variant/Normal/NormalLinkButton',
   component: NormalLinkButton,
   tags: ['autodocs'],
   parameters: {

@@ -3,7 +3,6 @@ import { css } from '../../../../../../styled-system/css';
 import { FetchResultMessage } from './fetch-result-message';
 
 const meta: Meta<typeof FetchResultMessage> = {
-  title: 'Features/FetchResult/Components/Molecules/FetchResultMessage',
   component: FetchResultMessage,
   tags: ['autodocs'],
   parameters: {

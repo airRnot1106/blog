@@ -5,7 +5,6 @@ import { css } from '../../../../../../../styled-system/css';
 import { NormalButton } from './normal-button';
 
 const meta: Meta<typeof NormalButton> = {
-  title: 'Components/Atoms/Button/_Base/_Variant/Normal/NormalButton',
   component: NormalButton,
   tags: ['autodocs'],
   parameters: {

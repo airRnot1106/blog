@@ -3,7 +3,6 @@ import { css } from '../../../../../../../styled-system/css';
 import { AnchorHeading } from './anchor-heading';
 
 const meta: Meta<typeof AnchorHeading> = {
-  title: 'Components/Atoms/Heading/_Base/_Variant/Anchor/AnchorHeading',
   component: AnchorHeading,
   tags: ['autodocs'],
   parameters: {

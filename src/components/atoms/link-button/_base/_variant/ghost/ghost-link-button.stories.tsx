@@ -4,7 +4,6 @@ import { css } from '../../../../../../../styled-system/css';
 import { GhostLinkButton } from './ghost-link-button';
 
 const meta: Meta<typeof GhostLinkButton> = {
-  title: 'Components/Atoms/LinkButton/_Base/_Variant/Ghost/GhostLinkButton',
   component: GhostLinkButton,
   tags: ['autodocs'],
   parameters: {

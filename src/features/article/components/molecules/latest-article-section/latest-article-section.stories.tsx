@@ -5,7 +5,6 @@ import { LatestArticleCardListPresentational } from '../latest-article-card-list
 import { LatestArticleSection } from './latest-article-section';
 
 const meta: Meta<typeof LatestArticleSection> = {
-  title: 'Features/Article/Components/Molecules/LatestArticleSection',
   component: LatestArticleSection,
   tags: ['autodocs'],
   parameters: {

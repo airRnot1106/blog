@@ -3,7 +3,6 @@ import { css } from '../../../../../../styled-system/css';
 import { SiteBreadcrumb, type SiteBreadcrumbProps } from './site-breadcrumb';
 
 const meta: Meta<typeof SiteBreadcrumb> = {
-  title: 'Features/Site/Components/Atoms/SiteBreadcrumb',
   component: SiteBreadcrumb,
   tags: ['autodocs'],
   parameters: {

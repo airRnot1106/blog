@@ -5,7 +5,6 @@ import { LaprasImagePresentational } from '../../atoms/lapras-image/lapras-image
 import { LaprasSection } from './lapras-section';
 
 const meta: Meta<typeof LaprasSection> = {
-  title: 'Features/Lapras/Components/Molecules/LaprasSection',
   component: LaprasSection,
   tags: ['autodocs'],
   parameters: {

@@ -3,7 +3,6 @@ import { css } from '../../../../../styled-system/css';
 import { Heading } from './heading';
 
 const meta: Meta<typeof Heading> = {
-  title: 'Components/Atoms/Heading/_Base/Heading',
   component: Heading,
   tags: ['autodocs'],
   parameters: {
