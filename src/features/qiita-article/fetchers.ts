@@ -12,6 +12,10 @@ export const getQiitaArticles = async () => {
       Accept: 'application/json',
       Authorization: `Bearer ${process.env.QIITA_API_KEY}`,
     },
+    cache: 'force-cache',
+    next: {
+      revalidate: 60 * 60,
+    },
   });
 
   if (!res.ok) {
