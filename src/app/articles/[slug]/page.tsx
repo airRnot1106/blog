@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { BlogArticleLayout } from '../../../features/blog-article/components/molecules/blog-article-layout';
 import {
   getBlogArticleBySlug,
@@ -10,6 +11,21 @@ import { matchResult } from '../../../utils/result';
 type Params = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { slug } = await params;
+  const article = matchResult(
+    await getBlogArticleBySlug(slug),
+    (article) => article,
+    (error) => {
+      throw error;
+    },
+  );
+  return {
+    title: article.title,
+    description: article.description,
+  };
+}
 
 export default async function Article({ params }: Params) {
   const { slug } = await params;
