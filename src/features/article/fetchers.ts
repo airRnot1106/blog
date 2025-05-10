@@ -1,11 +1,15 @@
+import { isBefore } from '../../utils/date';
 import { getOgp } from '../../utils/ogp';
+import { shouldNeverHappen } from '../../utils/panic-helper';
 import { mapResult, matchResult } from '../../utils/result';
+import { getBlogArticles } from '../blog-article/utils';
 import { getQiitaArticles } from '../qiita-article/fetchers';
 import { getZennArticles } from '../zenn-article/fetchers';
 import { mapQiitaArticle, mapZennArticle } from './mappers';
 
 export const getArticles = async () => {
-  const [qiitaResult, zennResult] = await Promise.all([
+  const [blogResult, qiitaResult, zennResult] = await Promise.all([
+    getBlogArticles(),
     getQiitaArticles(),
     getZennArticles(),
   ]);
@@ -15,9 +19,7 @@ export const getArticles = async () => {
     mapResult(zennResult, ({ data: { articles } }) =>
       articles.map(mapZennArticle),
     ),
-  ]
-    .flatMap((result) => (result.ok ? result.data : []))
-    .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+  ].flatMap((result) => (result.ok ? result.data : []));
 
   const articles = await Promise.all(
     mergedArticles.map(async (article) => {
@@ -36,5 +38,19 @@ export const getArticles = async () => {
     }),
   );
 
-  return articles;
+  const blogArticles = matchResult(
+    blogResult,
+    (data) => data,
+    (error) => shouldNeverHappen(error.toString()),
+  ).map((article) => ({
+    id: `blog-${article.slug}`,
+    title: article.title,
+    href: `/articles/${article.slug}`,
+    src: article.thumbnail,
+    createdAt: article.createdAt,
+  }));
+
+  return [...articles, ...blogArticles].sort((a, b) =>
+    isBefore(a.createdAt, b.createdAt) ? 1 : -1,
+  );
 };
