@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
-import { formatDateToYYYYMMDD } from '../../../../../utils/date';
+import { Datetime } from '../../../../datetime/components/atoms/datetime';
 
 export type ArticleCardProps = ComponentProps<'article'> & {
   article: {
@@ -73,9 +73,7 @@ export const ArticleCard: FC<ArticleCardProps> = ({
           >
             {title}
           </span>
-          <time dateTime={formatDateToYYYYMMDD(createdAt, { separator: '-' })}>
-            {formatDateToYYYYMMDD(createdAt)}
-          </time>
+          <Datetime datetime={createdAt} />
         </div>
       </Link>
     </article>
