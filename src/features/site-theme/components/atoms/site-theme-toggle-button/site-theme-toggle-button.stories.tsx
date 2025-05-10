@@ -4,7 +4,6 @@ import { css } from '../../../../../../styled-system/css';
 import { SiteThemeToggleButton } from './site-theme-toggle-button';
 
 const meta: Meta<typeof SiteThemeToggleButton> = {
-  title: 'Features/SiteTheme/Components/Atoms/SiteThemeToggleButton',
   component: SiteThemeToggleButton,
   tags: ['autodocs'],
   parameters: {

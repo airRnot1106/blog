@@ -4,7 +4,6 @@ import { articles } from '../../../mocks';
 import { LatestArticleCardListPresentational } from './latest-article-card-list.presentational';
 
 const meta: Meta<typeof LatestArticleCardListPresentational> = {
-  title: 'Features/Article/Components/Molecules/LatestArticleCardList',
   component: LatestArticleCardListPresentational,
   tags: ['autodocs'],
   parameters: {

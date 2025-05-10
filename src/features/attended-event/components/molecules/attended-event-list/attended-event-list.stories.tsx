@@ -3,7 +3,6 @@ import { css } from '../../../../../../styled-system/css';
 import { AttendedEventList } from './attended-event-list';
 
 const meta: Meta<typeof AttendedEventList> = {
-  title: 'Features/AttendedEvent/Components/Molecules/AttendedEventList',
   component: AttendedEventList,
   tags: ['autodocs'],
   parameters: {

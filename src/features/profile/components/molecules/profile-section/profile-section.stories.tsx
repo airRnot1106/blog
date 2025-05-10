@@ -3,7 +3,6 @@ import { css } from '../../../../../../styled-system/css';
 import { ProfileSection } from './profile-section';
 
 const meta: Meta<typeof ProfileSection> = {
-  title: 'Features/Profile/Components/Molecules/ProfileSection',
   component: ProfileSection,
   tags: ['autodocs'],
   parameters: {

@@ -4,7 +4,6 @@ import { attendedEvents } from '../../../consts';
 import { AttendedEventItem } from './attended-event-item';
 
 const meta: Meta<typeof AttendedEventItem> = {
-  title: 'Features/AttendedEvent/Components/Atoms/AttendedEventItem',
   component: AttendedEventItem,
   tags: ['autodocs'],
   parameters: {

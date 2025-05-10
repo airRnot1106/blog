@@ -3,7 +3,6 @@ import { css } from '../../../../../../styled-system/css';
 import { Datetime } from './datetime';
 
 const meta: Meta<typeof Datetime> = {
-  title: 'Features/Datetime/Components/Atoms/Datetime',
   component: Datetime,
   tags: ['autodocs'],
   parameters: {

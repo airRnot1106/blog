@@ -3,7 +3,6 @@ import { css } from '../../../../../../../styled-system/css';
 import { SquareImageIcon } from './square-image-icon';
 
 const meta: Meta<typeof SquareImageIcon> = {
-  title: 'Components/Atoms/ImageIcon/_Base/_Variant/SquareImageIcon',
   component: SquareImageIcon,
   tags: ['autodocs'],
   parameters: {

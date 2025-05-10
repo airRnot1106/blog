@@ -22,7 +22,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { {{ inputs.component | pascal }} } from './{{ inputs.component | kebab }}';
 
 const meta: Meta<typeof {{ inputs.component | pascal }}> = {
-  title: '',
   component: {{ inputs.component | pascal }},
   tags: ['autodocs'],
   parameters: {

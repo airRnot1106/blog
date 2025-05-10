@@ -3,7 +3,6 @@ import { css } from '../../../../../../../styled-system/css';
 import { CircleImageIcon } from './circle-image-icon';
 
 const meta: Meta<typeof CircleImageIcon> = {
-  title: 'Components/Atoms/ImageIcon/_Base/_Variant/CircleImageIcon',
   component: CircleImageIcon,
   tags: ['autodocs'],
   parameters: {

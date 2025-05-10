@@ -5,7 +5,6 @@ import { ArticleCardListPresentational } from '../article-card-list/article-card
 import { ArticleSection } from './article-section';
 
 const meta: Meta<typeof ArticleSection> = {
-  title: 'Features/Article/Components/Molecules/ArticleSection',
   component: ArticleSection,
   tags: ['autodocs'],
   parameters: {

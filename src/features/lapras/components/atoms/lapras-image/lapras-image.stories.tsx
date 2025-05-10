@@ -3,7 +3,6 @@ import { css } from '../../../../../../styled-system/css';
 import { LaprasImagePresentational } from './lapras-image.presentational';
 
 const meta: Meta<typeof LaprasImagePresentational> = {
-  title: 'Features/Lapras/Components/Atoms/LaprasImage',
   component: LaprasImagePresentational,
   tags: ['autodocs'],
   parameters: {

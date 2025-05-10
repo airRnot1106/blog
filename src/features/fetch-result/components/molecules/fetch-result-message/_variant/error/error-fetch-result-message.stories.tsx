@@ -3,8 +3,6 @@ import { css } from '../../../../../../../../styled-system/css';
 import { ErrorFetchResultMessage } from './error-fetch-result-message';
 
 const meta: Meta<typeof ErrorFetchResultMessage> = {
-  title:
-    'Features/FetchResult/Components/Molecules/FetchResultMessage/_Variant/Error/ErrorFetchResultMessage',
   component: ErrorFetchResultMessage,
   tags: ['autodocs'],
   parameters: {

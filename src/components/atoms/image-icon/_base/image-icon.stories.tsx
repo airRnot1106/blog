@@ -3,7 +3,6 @@ import { css } from '../../../../../styled-system/css';
 import { ImageIcon } from './image-icon';
 
 const meta: Meta<typeof ImageIcon> = {
-  title: 'Components/Atoms/ImageIcon/_Base/ImageIcon',
   component: ImageIcon,
   tags: ['autodocs'],
   parameters: {

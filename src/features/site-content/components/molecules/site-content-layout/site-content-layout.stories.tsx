@@ -3,7 +3,6 @@ import { css } from '../../../../../../styled-system/css';
 import { SiteContentLayout } from './site-content-layout';
 
 const meta: Meta<typeof SiteContentLayout> = {
-  title: '',
   component: SiteContentLayout,
   tags: ['autodocs'],
   parameters: {
