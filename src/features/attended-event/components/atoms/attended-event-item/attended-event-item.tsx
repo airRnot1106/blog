@@ -1,12 +1,9 @@
 import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
 import { Link } from '../../../../../components/atoms/link';
-import {
-  formatDateToYYYYMMDD,
-  isAfter,
-  isBefore,
-} from '../../../../../utils/date';
+import { isAfter, isBefore } from '../../../../../utils/date';
 import { shouldNeverHappen } from '../../../../../utils/panic-helper';
+import { Datetime } from '../../../../datetime/components/atoms/datetime';
 
 export type AttendedEventItemProps = ComponentProps<'div'> & {
   title: string;
@@ -36,7 +33,7 @@ export const AttendedEventItem: FC<AttendedEventItemProps> = ({
     >
       <div>
         {sortedDates.map((date) => (
-          <time
+          <Datetime
             className={css({
               '&:not(:last-child)': {
                 _after: {
@@ -45,11 +42,9 @@ export const AttendedEventItem: FC<AttendedEventItemProps> = ({
                 },
               },
             })}
-            dateTime={formatDateToYYYYMMDD(date, { separator: '-' })}
+            datetime={date}
             key={date.toISOString()}
-          >
-            {formatDateToYYYYMMDD(date)}
-          </time>
+          />
         ))}
       </div>
       <span
