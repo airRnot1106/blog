@@ -13,6 +13,10 @@ export const getZennArticles = async () => {
       headers: {
         Accept: 'application/json',
       },
+      cache: 'force-cache',
+      next: {
+        revalidate: 60 * 60,
+      },
     },
   );
 
