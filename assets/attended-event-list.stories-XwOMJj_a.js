@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-DoEZbXM1.js";import{c as p}from"./css-iA79nXp1.js";import{A as m}from"./attended-event-list-B88EgDL7.js";import"./jsx-runtime-Bw5QeaCk.js";import"./cx-BFURdk0p.js";import"./datetime-At4GKbE0.js";import"./panic-helper-BEWS6D6P.js";import"./attended-event-item-BOr_f4Ns.js";import"./link-D8HMmSCG.js";import"./underline-link-BKNhLiPR.js";import"./link-DOkctWu4.js";import"./link-CiQcZn3-.js";import"./_commonjsHelpers-CqkleIqs.js";import"./router-context.shared-runtime-C3rDQPqq.js";import"./index-Za3YRiuF.js";import"./add-base-path-Yz4dcL5G.js";import"./use-merged-ref-vu_KmdPm.js";const y={component:m,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[a=>t.jsx("div",{className:p({padding:"1rem"}),children:t.jsx(a,{})})]},r={render:()=>t.jsx(m,{})};var e,o,s;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
+  render: () => {
+    return <AttendedEventList />;
+  }
+}`,...(s=(o=r.parameters)==null?void 0:o.docs)==null?void 0:s.source}}};const N=["Default"];export{r as Default,N as __namedExportsOrder,y as default};
