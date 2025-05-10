@@ -1,6 +1,15 @@
+import { formatDateToYYYYMMDD } from '../../utils/date';
+import type { BlogArticle } from '../blog-article/schemas';
 import type { QiitaArticle } from '../qiita-article/schemas';
 import type { ZennArticle } from '../zenn-article/schemas';
 import type { Article } from './schemas';
+
+export const mapBlogArticle = (dto: BlogArticle): Article => ({
+  id: `blog-${dto.slug}`,
+  title: dto.title,
+  url: `/articles/${dto.slug}`,
+  createdAt: formatDateToYYYYMMDD(dto.createdAt),
+});
 
 export const mapQiitaArticle = (dto: QiitaArticle): Article => ({
   id: `qiita-${dto.id}`,
