@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { formatDateToYYYYMMDD, isAfter, isBefore } from './date';
+import {
+  formatDateToRFC822,
+  formatDateToYYYYMMDD,
+  isAfter,
+  isBefore,
+} from './date';
 
 describe('formatDate', () => {
   describe('formatDateToYYYYMMDD', () => {
@@ -26,6 +31,15 @@ describe('formatDate', () => {
         expect(result).toEqual(`2023${separator}10${separator}01`);
       },
     );
+  });
+
+  describe('formatDateToRFC822', () => {
+    it('RFC822形式でフォーマットされる', () => {
+      expect.assertions(1);
+      const date = new Date('2023-10-01T00:00:00+09:00');
+      const result = formatDateToRFC822(date);
+      expect(result).toEqual('Sun, 01 Oct 2023 00:00:00 +0900');
+    });
   });
 
   describe('isBefore', () => {

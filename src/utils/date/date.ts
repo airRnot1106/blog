@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { formatInTimeZone } from 'date-fns-tz';
 
 export const formatDateToYYYYMMDD = (
   date: Date,
@@ -8,7 +8,11 @@ export const formatDateToYYYYMMDD = (
 ) => {
   const { separator = '/' } = options ?? {};
   const formatString = ['yyyy', 'MM', 'dd'].join(separator);
-  return format(date, formatString);
+  return formatInTimeZone(date, 'Asia/Tokyo', formatString);
+};
+
+export const formatDateToRFC822 = (date: Date) => {
+  return formatInTimeZone(date, 'Asia/Tokyo', 'EEE, dd MMM yyyy HH:mm:ss xx');
 };
 
 export const isBefore = (a: Date, b: Date) => {
