@@ -1,1 +1,0 @@
-import{j as o}from"./jsx-runtime-DoEZbXM1.js";import{L as i}from"./link-CwwPhB3g.js";const s=({children:e,...r})=>o.jsx(i,{...r,children:e});s.__docgenInfo={description:"",methods:[],displayName:"Link",props:{children:{required:!0,tsType:{name:"ReactNode"},description:""}}};export{s as L};

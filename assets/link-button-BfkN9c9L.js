@@ -1,1 +1,0 @@
-import{j as n}from"./jsx-runtime-DoEZbXM1.js";import{G as o}from"./ghost-link-button-Cy5aAqHB.js";import{N as r}from"./normal-link-button-Bx_RbtcT.js";const s=t=>{switch(t.variant){case"ghost":return n.jsx(o,{...t});case"normal":return n.jsx(r,{...t});default:return t}};s.__docgenInfo={description:"",methods:[],displayName:"LinkButton"};export{s as L};

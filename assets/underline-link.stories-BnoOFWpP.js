@@ -1,0 +1,5 @@
+import{j as e}from"./jsx-runtime-DoEZbXM1.js";import{c as a}from"./css-iA79nXp1.js";import{U as i}from"./underline-link-BKNhLiPR.js";import"./jsx-runtime-Bw5QeaCk.js";import"./cx-BFURdk0p.js";import"./link-DOkctWu4.js";import"./link-CiQcZn3-.js";import"./_commonjsHelpers-CqkleIqs.js";import"./router-context.shared-runtime-C3rDQPqq.js";import"./index-Za3YRiuF.js";import"./add-base-path-Yz4dcL5G.js";import"./use-merged-ref-vu_KmdPm.js";const h={title:"Components/Atoms/Link/_Base/_Variant/Underline/UnderlineLink",component:i,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[s=>e.jsx("div",{className:a({padding:"1rem"}),children:e.jsx(s,{})})]},r={render:()=>e.jsx(i,{href:"#",children:"Underline Link"})};var n,t,o;r.parameters={...r.parameters,docs:{...(n=r.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  render: () => {
+    return <UnderlineLink href="#">Underline Link</UnderlineLink>;
+  }
+}`,...(o=(t=r.parameters)==null?void 0:t.docs)==null?void 0:o.source}}};const _=["Default"];export{r as Default,_ as __namedExportsOrder,h as default};

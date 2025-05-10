@@ -1,1 +1,0 @@
-import{j as e}from"./jsx-runtime-DoEZbXM1.js";import{U as i}from"./underline-link-TgH5QTpO.js";const t=n=>{switch(n.variant){case"underline":return e.jsx(i,{...n});default:return n.variant}};t.__docgenInfo={description:"",methods:[],displayName:"Link"};export{t as L};
