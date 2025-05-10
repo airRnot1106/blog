@@ -5,7 +5,7 @@ import { mapResult, matchResult } from '../../utils/result';
 import { getBlogArticles } from '../blog-article/utils';
 import { getQiitaArticles } from '../qiita-article/fetchers';
 import { getZennArticles } from '../zenn-article/fetchers';
-import { mapQiitaArticle, mapZennArticle } from './mappers';
+import { mapBlogArticle, mapQiitaArticle, mapZennArticle } from './mappers';
 
 export const getArticles = async () => {
   const [blogResult, qiitaResult, zennResult] = await Promise.all([
@@ -24,16 +24,13 @@ export const getArticles = async () => {
   const articles = await Promise.all(
     mergedArticles.map(async (article) => {
       const ogImage = matchResult(
-        await getOgp(article.url),
+        await getOgp(article.href),
         ({ result }) => result.ogImage.url,
         () => '/images/article/fallback.webp',
       );
       return {
-        id: article.id,
-        title: article.title,
-        href: article.url,
+        ...article,
         src: ogImage,
-        createdAt: new Date(article.createdAt),
       };
     }),
   );
@@ -42,13 +39,7 @@ export const getArticles = async () => {
     blogResult,
     (data) => data,
     (error) => shouldNeverHappen(error.toString()),
-  ).map((article) => ({
-    id: `blog-${article.slug}`,
-    title: article.title,
-    href: `/articles/${article.slug}`,
-    src: article.thumbnail,
-    createdAt: article.createdAt,
-  }));
+  ).map(mapBlogArticle);
 
   return [...articles, ...blogArticles].sort((a, b) =>
     isBefore(a.createdAt, b.createdAt) ? 1 : -1,

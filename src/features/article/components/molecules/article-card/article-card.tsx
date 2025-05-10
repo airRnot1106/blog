@@ -3,19 +3,14 @@ import Link from 'next/link';
 import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
 import { Datetime } from '../../../../datetime/components/atoms/datetime';
+import type { Article } from '../../../schemas';
 
 export type ArticleCardProps = ComponentProps<'article'> & {
-  article: {
-    id: string;
-    title: string;
-    href: string;
-    src: string;
-    createdAt: Date;
-  };
+  article: Article;
 };
 
 export const ArticleCard: FC<ArticleCardProps> = ({
-  article: { title, href, src, createdAt },
+  article: { title, href, src, createdAt, isExternalSite },
   className,
   ...rest
 }) => {
@@ -42,7 +37,7 @@ export const ArticleCard: FC<ArticleCardProps> = ({
           gridRow: 'span 3',
         })}
         href={href}
-        target="_blank"
+        target={isExternalSite ? '_blank' : undefined}
       >
         <Image
           alt=""
