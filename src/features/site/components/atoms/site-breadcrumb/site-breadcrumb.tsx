@@ -52,7 +52,15 @@ export const SiteBreadcrumb: FC<SiteBreadcrumbProps> = ({
             key={href}
           >
             <LinkButton href={href} size="sm" variant="ghost">
-              {label}
+              <span
+                className={css({
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                })}
+              >
+                {label}
+              </span>
             </LinkButton>
           </li>
         ))}
