@@ -41,7 +41,7 @@ export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
           size="fit-content"
           variant="normal"
         >
-          <Menu aria-label="メニューを開く" />
+          <Menu aria-label="メニューを開く" role="img" />
         </Button>
       </Drawer.Trigger>
       <Drawer.Portal>

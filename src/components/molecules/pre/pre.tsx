@@ -65,9 +65,9 @@ export const Pre: FC<PreProps> = ({ children, ...props }) => {
         variant="normal"
       >
         {isCopied ? (
-          <Check aria-label="コピーしました" />
+          <Check aria-label="コピーしました" role="img" />
         ) : (
-          <Clipboard aria-label="コピーする" />
+          <Clipboard aria-label="コピーする" role="img" />
         )}
       </Button>
       {children}

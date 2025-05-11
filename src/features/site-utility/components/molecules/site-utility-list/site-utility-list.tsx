@@ -48,13 +48,14 @@ export const SiteUtilityList: FC<SiteUtilityListProps> = ({
               fill: 'currentColor',
             })}
             height="28"
+            role="img"
             width="28"
           />
         </LinkButton>
       </li>
       <li>
         <LinkButton href="/articles/feed.xml" size="md" variant="ghost">
-          <Rss aria-label="RSS" size="28" />
+          <Rss aria-label="RSS" role="img" size="28" />
         </LinkButton>
       </li>
     </ul>

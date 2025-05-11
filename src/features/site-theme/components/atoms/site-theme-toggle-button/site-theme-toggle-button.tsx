@@ -85,11 +85,6 @@ export const SiteThemeToggleButton: FC<SiteThemeToggleButtonProps> = ({
   return (
     <Button
       aria-checked={siteTheme === 'dark'}
-      aria-label={
-        siteTheme === 'dark'
-          ? 'ライトモードに切り替え'
-          : 'ダークモードに切り替え'
-      }
       className={cx(
         className,
         css({
@@ -110,15 +105,19 @@ export const SiteThemeToggleButton: FC<SiteThemeToggleButtonProps> = ({
     >
       <Sun
         aria-hidden="true"
+        aria-label="ダークモードに切り替え"
         className={iconRecipe({ theme: siteTheme, size })}
         data-enabled={siteTheme === 'light' || siteTheme === 'system'}
         focusable="false"
+        role="img"
       />
       <Moon
         aria-hidden="true"
+        aria-label="ライトモードに切り替え"
         className={iconRecipe({ theme: siteTheme, size })}
         data-enabled={siteTheme === 'dark'}
         focusable="false"
+        role="img"
       />
     </Button>
   );
