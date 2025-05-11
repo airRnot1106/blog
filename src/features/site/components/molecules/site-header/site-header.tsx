@@ -2,6 +2,9 @@ import Link from 'next/link';
 import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
 import { SiteUtilityList } from '../../../../site-utility/components/molecules/site-utility-list';
+import { SITE_NAVIGATION_LINKS } from '../../../consts';
+import { SiteDrawer } from '../site-drawer';
+import { SiteNavigationLinkList } from '../site-navigation-link-list';
 
 export type SiteHeaderProps = ComponentProps<'header'>;
 
@@ -42,7 +45,35 @@ export const SiteHeader: FC<SiteHeaderProps> = ({ className, ...rest }) => {
           airRnot.dev
         </h1>
       </Link>
-      <SiteUtilityList />
+      <div
+        className={css({
+          display: 'inline-grid',
+          gridAutoFlow: 'column',
+          hideBelow: 'md',
+        })}
+      >
+        <SiteNavigationLinkList
+          links={SITE_NAVIGATION_LINKS}
+          variant="button"
+        />
+        <hr
+          className={css({
+            color: 'transparent',
+            backgroundColor: 'muted/20',
+            marginInline: '1rem',
+            width: '1px',
+            height: '100%',
+          })}
+        />
+        <SiteUtilityList />
+      </div>
+      <div
+        className={css({
+          hideFrom: 'md',
+        })}
+      >
+        <SiteDrawer />
+      </div>
     </header>
   );
 };
