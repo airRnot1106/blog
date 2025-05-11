@@ -1,7 +1,9 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { css } from '../../styled-system/css';
 import { SiteLayout } from '../features/site/components/molecules/site-layout';
 import { SiteThemeProvider } from '../features/site-theme/providers';
+import { GOOGLE_ANALYTICS_ID } from '../libs/analytics';
 import { ich1q, zenkaku } from './fonts';
 
 import './globals.css';
@@ -39,6 +41,9 @@ export default function RootLayout({
           <SiteLayout>{children}</SiteLayout>
         </SiteThemeProvider>
       </body>
+      {process.env.NODE_ENV === 'production' && (
+        <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
+      )}
     </html>
   );
 }
