@@ -24,6 +24,35 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: article.title,
     description: article.description,
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      url: `https://airrnot.dev/articles/${article.slug}`,
+      type: 'article',
+      images: [
+        {
+          url: `https://airrnot.dev/api/og?title=${encodeURIComponent(
+            article.title,
+          )}`,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.description,
+      images: [
+        {
+          url: `https://airrnot.dev/api/og?title=${encodeURIComponent(
+            article.title,
+          )}`,
+          alt: article.title,
+        },
+      ],
+    },
   };
 }
 
