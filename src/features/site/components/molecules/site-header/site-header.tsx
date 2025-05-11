@@ -1,10 +1,7 @@
-import { Rss } from 'lucide-react';
 import Link from 'next/link';
 import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
-import GitHub from '../../../../../assets/svg/github-mark.svg';
-import { LinkButton } from '../../../../../components/atoms/link-button';
-import { SiteThemeToggleButton } from '../../../../site-theme/components/atoms/site-theme-toggle-button';
+import { SiteUtilityList } from '../../../../site-utility/components/molecules/site-utility-list';
 
 export type SiteHeaderProps = ComponentProps<'header'>;
 
@@ -45,47 +42,7 @@ export const SiteHeader: FC<SiteHeaderProps> = ({ className, ...rest }) => {
           airRnot.dev
         </h1>
       </Link>
-      <ul
-        className={css({
-          display: 'grid',
-          gridAutoFlow: 'column',
-          alignItems: 'center',
-          columnGap: {
-            base: '0.25rem',
-            sm: '0.5rem',
-          },
-          '& > li': {
-            display: 'grid',
-            alignItems: 'center',
-          },
-        })}
-      >
-        <li>
-          <SiteThemeToggleButton size="md" />
-        </li>
-        <li>
-          <LinkButton
-            href="https://github.com/airRnot1106/blog"
-            size="md"
-            target="_blank"
-            variant="ghost"
-          >
-            <GitHub
-              aria-label="GitHub"
-              className={css({
-                fill: 'currentColor',
-              })}
-              height="28"
-              width="28"
-            />
-          </LinkButton>
-        </li>
-        <li>
-          <LinkButton href="/articles/feed.xml" size="md" variant="ghost">
-            <Rss aria-label="RSS" size="28" />
-          </LinkButton>
-        </li>
-      </ul>
+      <SiteUtilityList />
     </header>
   );
 };
