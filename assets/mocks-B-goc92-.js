@@ -1,0 +1,1 @@
+import{j as i}from"./jsx-runtime-DoEZbXM1.js";import{N as s}from"./newspaper-AlF7AAQn.js";const a=[{id:1,label:"記事一覧",href:"/articles",icon:i.jsx(s,{size:"28"})},{id:2,label:"タグ一覧",href:"/tags",icon:i.jsx(s,{size:"28"})},{id:3,label:"アーカイブ",href:"/archives",icon:i.jsx(s,{size:"28"})},{id:4,label:"プロフィール",href:"/profile",icon:i.jsx(s,{size:"28"})}];export{a as s};
