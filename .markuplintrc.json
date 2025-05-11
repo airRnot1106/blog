@@ -5,5 +5,12 @@
   "parser": {
     "\\.[jt]sx?$": "@markuplint/jsx-parser"
   },
-  "extends": ["markuplint:recommended"]
+  "extends": ["markuplint:recommended"],
+  "rules": {
+    "invalid-attr": {
+      "options": {
+        "ignoreAttrNamePrefix": ["autofocus"]
+      }
+    }
+  }
 }
