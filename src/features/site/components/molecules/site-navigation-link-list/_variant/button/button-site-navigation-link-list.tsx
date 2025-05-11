@@ -30,6 +30,7 @@ export const ButtonSiteNavigationLinkList: FC<
       {links.map((link) => {
         const icon = cloneElement(link.icon, {
           'aria-label': link.label,
+          role: 'img',
         } as Attributes);
         return (
           <li key={link.id}>
