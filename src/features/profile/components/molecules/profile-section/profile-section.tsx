@@ -31,6 +31,7 @@ export const ProfileSection: FC<ProfileSectionProps> = ({
             width: 'clamp(8rem, 4.364rem + 15.52vw, 16rem)',
           })}
           height="300"
+          priority
           size="fit-content"
           src="/images/profile/airrnot.webp"
           variant="circle"

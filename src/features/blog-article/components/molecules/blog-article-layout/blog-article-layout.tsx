@@ -46,6 +46,7 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
             paddingBlock: '1rem',
           })}
           height="268"
+          priority
           src={thumbnail}
           width="512"
         />
