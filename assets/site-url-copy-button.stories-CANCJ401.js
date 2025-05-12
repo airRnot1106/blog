@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-DoEZbXM1.js";import{c as i}from"./css-iA79nXp1.js";import{S as a}from"./site-url-copy-button-C0cXTSbx.js";import"./jsx-runtime-Bw5QeaCk.js";import"./cx-BFURdk0p.js";import"./button-abs7jE4F.js";import"./ghost-button-DVSEpKed.js";import"./button-CFgMdbM0.js";import"./cva-CuDB4TaM.js";import"./normal-button-Be3dRcwo.js";import"./createLucideIcon-dVToDc26.js";import"./index-DDr4uD8U.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Za3YRiuF.js";const B={component:a,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[m=>t.jsx("div",{className:i({padding:"1rem"}),children:t.jsx(m,{})})]},r={render:()=>t.jsx(a,{url:"https://airrnot.dev/articles/imhere"})};var e,o,s;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
+  render: () => {
+    return <SiteUrlCopyButton url="https://airrnot.dev/articles/imhere" />;
+  }
+}`,...(s=(o=r.parameters)==null?void 0:o.docs)==null?void 0:s.source}}};const C=["Default"];export{r as Default,C as __namedExportsOrder,B as default};
