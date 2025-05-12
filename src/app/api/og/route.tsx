@@ -1,11 +1,12 @@
 import { ImageResponse } from 'next/og';
+import { SITE_NAME } from '../../../features/site/consts';
 import { shouldNeverHappen } from '../../../utils/panic-helper';
 import { ICON_DATA_URI } from './consts';
 
 export const runtime = 'edge';
 
 async function loadGoogleFont(font: string, text: string) {
-  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text + 'airRnot.dev')}`;
+  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(text + SITE_NAME)}`;
   const css = await (await fetch(url)).text();
   const resource = css.match(
     /src: url\((.+)\) format\('(opentype|truetype)'\)/,
@@ -73,7 +74,7 @@ export async function GET(request: Request) {
             color: '#575279',
           }}
         >
-          airRnot.dev
+          {SITE_NAME}
         </span>
       </div>
     </div>,

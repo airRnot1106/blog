@@ -1,17 +1,20 @@
 import { NextResponse } from 'next/server';
 import RSS from 'rss';
 import { getBlogArticles } from '../../../features/blog-article/utils';
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+} from '../../../features/site/consts';
 import { formatDateToRFC822 } from '../../../utils/date';
 import { matchResult } from '../../../utils/result';
 
-const SITE_URL = 'https://airrnot.dev';
-
 export async function GET() {
   const feed = new RSS({
-    title: 'airRnot.dev',
-    description: 'airRnotのブログ',
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
     site_url: SITE_URL,
-    feed_url: 'https://airrnot.dev/articles/feed.xml',
+    feed_url: `${SITE_URL}/articles/feed.xml`,
     copyright: 'airRnot',
     language: 'ja',
     pubDate: formatDateToRFC822(new Date()),

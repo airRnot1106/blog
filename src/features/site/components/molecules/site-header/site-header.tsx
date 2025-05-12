@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
 import { SiteUtilityList } from '../../../../site-utility/components/molecules/site-utility-list';
-import { SITE_NAVIGATION_LINKS } from '../../../consts';
+import { SITE_NAME, SITE_NAVIGATION_LINKS } from '../../../consts';
 import { SiteDrawer } from '../site-drawer';
 import { SiteNavigationLinkList } from '../site-navigation-link-list';
 
@@ -42,7 +42,7 @@ export const SiteHeader: FC<SiteHeaderProps> = ({ className, ...rest }) => {
             fontWeight: 'bold',
           })}
         >
-          airRnot.dev
+          {SITE_NAME}
         </h1>
       </Link>
       <div
