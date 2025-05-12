@@ -37,25 +37,30 @@ export const SiteUtilityList: FC<SiteUtilityListProps> = ({
       </li>
       <li>
         <LinkButton
+          aria-label="GitHub"
           href="https://github.com/airRnot1106/blog"
           size="md"
           target="_blank"
           variant="ghost"
         >
           <GitHub
-            aria-label="GitHub"
+            aria-hidden
             className={css({
               fill: 'currentColor',
             })}
             height="28"
-            role="img"
             width="28"
           />
         </LinkButton>
       </li>
       <li>
-        <LinkButton href="/articles/feed.xml" size="md" variant="ghost">
-          <Rss aria-label="RSS" role="img" size="28" />
+        <LinkButton
+          aria-label="RSS"
+          href="/articles/feed.xml"
+          size="md"
+          variant="ghost"
+        >
+          <Rss size="28" />
         </LinkButton>
       </li>
     </ul>

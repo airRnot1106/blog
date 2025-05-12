@@ -87,6 +87,7 @@ export const Heading: FC<HeadingProps> = ({
             })}
           />
           <p
+            aria-hidden
             className={cva({
               base: {
                 gridRow: 'subtitle',

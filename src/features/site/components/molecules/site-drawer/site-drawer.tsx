@@ -34,6 +34,7 @@ export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
     >
       <Drawer.Trigger asChild>
         <Button
+          aria-label="メニューを開く"
           className={css({
             paddingBlock: '0.5rem',
             paddingInline: '0.5rem',
@@ -41,7 +42,7 @@ export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
           size="fit-content"
           variant="normal"
         >
-          <Menu aria-label="メニューを開く" role="img" />
+          <Menu />
         </Button>
       </Drawer.Trigger>
       <Drawer.Portal>

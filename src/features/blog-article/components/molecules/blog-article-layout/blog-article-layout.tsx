@@ -67,7 +67,7 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
               columnGap: '0.5rem',
             })}
           >
-            <Calendar size="18" />
+            <Calendar aria-hidden size="18" />
             <Datetime datetime={createdAt} />
           </span>
           {createdAt.getTime() !== updatedAt.getTime() && (
