@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { css } from '../../../../../../styled-system/css';
+import { SITE_NAME, SITE_URL } from '../../../../site/consts';
 import { SocialShareLinkButtonList } from './social-share-link-button-list';
 
 const meta: Meta<typeof SocialShareLinkButtonList> = {
@@ -30,8 +31,8 @@ export const Horizontal: Story = {
     return (
       <SocialShareLinkButtonList
         direction="horizontal"
-        text="サイトをリニューアルしました | airRnot.dev"
-        url="https://airrnot.dev/articles/imhere"
+        text={`サイトをリニューアルしました | ${SITE_NAME}`}
+        url={`${SITE_URL}/articles/imhere`}
       />
     );
   },
@@ -42,8 +43,8 @@ export const Vertical: Story = {
     return (
       <SocialShareLinkButtonList
         direction="vertical"
-        text="サイトをリニューアルしました | airRnot.dev"
-        url="https://airrnot.dev/articles/imhere"
+        text={`サイトをリニューアルしました | ${SITE_NAME}`}
+        url={`${SITE_URL}/articles/imhere`}
       />
     );
   },

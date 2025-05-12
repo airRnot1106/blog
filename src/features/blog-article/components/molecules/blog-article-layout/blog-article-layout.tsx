@@ -6,6 +6,7 @@ import { Datetime } from '../../../../datetime/components/atoms/datetime';
 import type { BlogArticle } from '../../../schemas';
 
 import '../../../styles.css';
+import { SITE_NAME, SITE_URL } from '../../../../site/consts';
 import { SocialShareLinkButtonList } from '../../../../social/components/molecules/social-share-link-button-list';
 
 export type BlogArticleLayoutProps = ComponentProps<'div'> & {
@@ -97,8 +98,8 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
           </div>
           <SocialShareLinkButtonList
             direction="horizontal"
-            text={`${title} | airRnot.dev`}
-            url={`https://airrnot.dev/articles/${slug}`}
+            text={`${title} | ${SITE_NAME}`}
+            url={`${SITE_URL}/articles/${slug}`}
           />
         </div>
         <h1

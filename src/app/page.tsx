@@ -5,6 +5,7 @@ import { AttendedEventSection } from '../features/attended-event/components/mole
 import { LaprasImage } from '../features/lapras/components/atoms/lapras-image';
 import { LaprasSection } from '../features/lapras/components/molecules/lapras-section';
 import { ProfileSection } from '../features/profile/components/molecules/profile-section';
+import { SITE_NAME } from '../features/site/consts';
 import { SiteContentLayout } from '../features/site-content/components/molecules/site-content-layout';
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
               fontSize: 'clamp(2rem, 0.182rem + 7.76vw, 6rem)',
             })}
           >
-            airRnot.dev
+            {SITE_NAME}
           </h1>
           <p
             className={css({

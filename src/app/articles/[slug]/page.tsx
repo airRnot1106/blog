@@ -6,6 +6,7 @@ import {
 } from '../../../features/blog-article/utils';
 import { BlogArticleTocNavigationSection } from '../../../features/blog-article-toc/components/molecules/blog-article-toc-navigation-section';
 import { SiteBreadcrumbLayout } from '../../../features/site/components/molecules/site-breadcrumb-layout';
+import { SITE_URL } from '../../../features/site/consts';
 import { matchResult } from '../../../utils/result';
 
 type Params = {
@@ -27,13 +28,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title: article.title,
       description: article.description,
-      url: `https://airrnot.dev/articles/${article.slug}`,
+      url: `${SITE_URL}/articles/${article.slug}`,
       type: 'article',
       images: [
         {
-          url: `https://airrnot.dev/api/og?title=${encodeURIComponent(
-            article.title,
-          )}`,
+          url: `${SITE_URL}/api/og?title=${encodeURIComponent(article.title)}`,
           width: 1200,
           height: 630,
           alt: article.title,
@@ -46,9 +45,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       description: article.description,
       images: [
         {
-          url: `https://airrnot.dev/api/og?title=${encodeURIComponent(
-            article.title,
-          )}`,
+          url: `${SITE_URL}/api/og?title=${encodeURIComponent(article.title)}`,
           alt: article.title,
         },
       ],
