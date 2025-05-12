@@ -1,7 +1,7 @@
+import { SiGithub } from '@icons-pack/react-simple-icons';
 import { Rss } from 'lucide-react';
 import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
-import GitHub from '../../../../../assets/svg/github-mark.svg';
 import { LinkButton } from '../../../../../components/atoms/link-button';
 import { SiteThemeToggleButton } from '../../../../site-theme/components/atoms/site-theme-toggle-button';
 
@@ -43,7 +43,7 @@ export const SiteUtilityList: FC<SiteUtilityListProps> = ({
           target="_blank"
           variant="ghost"
         >
-          <GitHub
+          <SiGithub
             aria-hidden
             className={css({
               fill: 'currentColor',
