@@ -53,6 +53,7 @@ export const Pre: FC<PreProps> = ({ children, ...props }) => {
       })}
     >
       <Button
+        aria-label={isCopied ? 'コピーしました' : 'コピーする'}
         className={css({
           position: 'absolute',
           top: '0.5rem',
@@ -64,11 +65,7 @@ export const Pre: FC<PreProps> = ({ children, ...props }) => {
         type="button"
         variant="normal"
       >
-        {isCopied ? (
-          <Check aria-label="コピーしました" role="img" />
-        ) : (
-          <Clipboard aria-label="コピーする" role="img" />
-        )}
+        {isCopied ? <Check /> : <Clipboard />}
       </Button>
       {children}
     </pre>

@@ -1,9 +1,4 @@
-import {
-  type Attributes,
-  type ComponentProps,
-  cloneElement,
-  type FC,
-} from 'react';
+import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../../../styled-system/css';
 import { LinkButton } from '../../../../../../../components/atoms/link-button';
 import type { SiteNavigationLink as SiteNavigationLinkType } from '../../../../../types';
@@ -28,14 +23,15 @@ export const ButtonSiteNavigationLinkList: FC<
       {...rest}
     >
       {links.map((link) => {
-        const icon = cloneElement(link.icon, {
-          'aria-label': link.label,
-          role: 'img',
-        } as Attributes);
         return (
           <li key={link.id}>
-            <LinkButton href={link.href} size="md" variant="ghost">
-              {icon}
+            <LinkButton
+              aria-label={link.label}
+              href={link.href}
+              size="md"
+              variant="ghost"
+            >
+              {link.icon}
             </LinkButton>
           </li>
         );
