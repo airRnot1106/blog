@@ -85,11 +85,7 @@ export const SiteThemeToggleButton: FC<SiteThemeToggleButtonProps> = ({
   return (
     <Button
       aria-checked={siteTheme === 'dark'}
-      aria-label={
-        siteTheme === 'dark'
-          ? 'ライトモードに切り替える'
-          : 'ダークモードに切り替える'
-      }
+      aria-label="ダークモード"
       className={cx(
         className,
         css({
