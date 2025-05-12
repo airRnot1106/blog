@@ -6,6 +6,7 @@ import { Datetime } from '../../../../datetime/components/atoms/datetime';
 import type { BlogArticle } from '../../../schemas';
 
 import '../../../styles.css';
+import { SocialShareLinkButtonList } from '../../../../social/components/molecules/social-share-link-button-list';
 
 export type BlogArticleLayoutProps = ComponentProps<'div'> & {
   article: BlogArticle;
@@ -14,7 +15,7 @@ export type BlogArticleLayoutProps = ComponentProps<'div'> & {
 };
 
 export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
-  article: { createdAt, description, thumbnail, title, updatedAt },
+  article: { createdAt, description, slug, thumbnail, title, updatedAt },
   blogArticleTocNavigationSection,
   children,
   className,
@@ -54,23 +55,21 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
           className={css({
             display: 'inline-grid',
             gridAutoFlow: 'column',
-            columnGap: '1rem',
+            alignItems: 'center',
+            columnGap: '2.5rem',
             marginTop: '0.5rem',
             width: 'fit-content',
           })}
         >
-          <span
+          <div
             className={css({
               display: 'inline-grid',
               gridAutoFlow: 'column',
               alignItems: 'center',
-              columnGap: '0.5rem',
+              columnGap: '1rem',
+              width: 'fit-content',
             })}
           >
-            <Calendar aria-hidden size="18" />
-            <Datetime datetime={createdAt} />
-          </span>
-          {createdAt.getTime() !== updatedAt.getTime() && (
             <span
               className={css({
                 display: 'inline-grid',
@@ -79,10 +78,28 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
                 columnGap: '0.5rem',
               })}
             >
-              <RefreshCw size="18" />
-              <Datetime datetime={updatedAt} />
+              <Calendar aria-hidden size="18" />
+              <Datetime datetime={createdAt} />
             </span>
-          )}
+            {createdAt.getTime() !== updatedAt.getTime() && (
+              <span
+                className={css({
+                  display: 'inline-grid',
+                  gridAutoFlow: 'column',
+                  alignItems: 'center',
+                  columnGap: '0.5rem',
+                })}
+              >
+                <RefreshCw size="18" />
+                <Datetime datetime={updatedAt} />
+              </span>
+            )}
+          </div>
+          <SocialShareLinkButtonList
+            direction="horizontal"
+            text={`${title} | airRnot.dev`}
+            url={`https://airrnot.dev/articles/${slug}`}
+          />
         </div>
         <h1
           className={css({
