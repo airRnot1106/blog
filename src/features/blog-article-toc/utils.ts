@@ -4,13 +4,13 @@ import { ARTICLE_PATH } from '../blog-article/consts';
 import type { TocHeading } from './types';
 
 export const getTocTree = (file: string) => {
-  const headings = extractHeadings(`${ARTICLE_PATH}/${file}`).map(
-    (heading) => ({
+  const headings = extractHeadings(`${ARTICLE_PATH}/${file}`)
+    .filter((heading) => heading.level <= 4)
+    .map((heading) => ({
       ...heading,
       title:
         heading.title.split(' - ')[0] ?? shouldNeverHappen('missing title'),
-    }),
-  );
+    }));
 
   const root: TocHeading[] = [];
   const stack: TocHeading[] = [];
