@@ -150,6 +150,7 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
           className={cx(
             css({
               gridArea: 'article-content',
+              overflowX: 'hidden',
             }),
             'mdc',
           )}
