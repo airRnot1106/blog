@@ -138,6 +138,7 @@ figcaption[data-rehype-pretty-code-title] + pre {
 .mdc td {
   padding: 0.6em 1em;
   border: 1px solid var(--colors-muted);
+  white-space: nowrap;
 }
 .mdc th {
   background: var(--colors-surface);

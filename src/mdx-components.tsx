@@ -1,5 +1,5 @@
 import type { MDXComponents } from 'mdx/types';
-import { cx } from '../styled-system/css';
+import { css, cx } from '../styled-system/css';
 import { Heading } from './components/atoms/heading';
 import { Link } from './components/atoms/link';
 import { Pre } from './components/molecules/pre';
@@ -98,6 +98,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       );
     },
     pre: (props) => <Pre {...props} />,
+    table: ({ children, className, ...rest }) => (
+      <div className={css({ overflowX: 'auto' })}>
+        <table className={className} {...rest}>
+          {children}
+        </table>
+      </div>
+    ),
     ...components,
   };
 }

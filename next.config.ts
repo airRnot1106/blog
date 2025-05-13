@@ -2,7 +2,9 @@ import bundleAnalyzer from '@next/bundle-analyzer';
 import createMDX from '@next/mdx';
 import type { NextConfig } from 'next';
 import rehypePrettyCode from 'rehype-pretty-code';
+import remarkBreaks from 'remark-breaks';
 import remarkFrontmatter from 'remark-frontmatter';
+import remarkGfm from 'remark-gfm';
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -12,7 +14,7 @@ const withMDX = createMDX({
   // Add markdown plugins here, as desired
   extension: /\.(md|mdx)$/,
   options: {
-    remarkPlugins: [remarkFrontmatter],
+    remarkPlugins: [remarkBreaks, remarkFrontmatter, remarkGfm],
     rehypePlugins: [
       [
         rehypePrettyCode,
