@@ -19,6 +19,10 @@
   color: var(--colors-foam);
 }
 
+.mdc a:has(hgroup) + a:has(hgroup) {
+  margin-top: 2em;
+}
+
 .mdc strong {
   font-weight: 700;
 }

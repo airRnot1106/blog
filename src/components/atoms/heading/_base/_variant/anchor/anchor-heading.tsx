@@ -11,6 +11,7 @@ export const AnchorHeading: FC<AnchorHeadingProps> = ({ href, ...rest }) => {
   return (
     <Link
       className={css({
+        display: 'block',
         position: 'relative',
         _before: {
           opacity: '0',

@@ -37,6 +37,7 @@ export const Heading: FC<HeadingProps> = ({
             gridRow: 'title',
             gridColumn: 'title',
             fontWeight: 'bold',
+            whiteSpace: 'nowrap',
           },
           variants: {
             as: {
