@@ -108,7 +108,7 @@ figcaption[data-rehype-pretty-code-title] + pre {
 .mdc blockquote {
   margin: 1.5em 0;
   padding: 0.5em 1em;
-  color: color-mix(in srgb, var(--colors-muted) 80%, var(--color-mix-base));
+  color: color-mix(in srgb, var(--colors-muted) 40%, var(--color-mix-base));
   border-left: 0.25em solid var(--colors-highlight-high);
   background-color: var(--colors-surface);
 }
@@ -151,7 +151,8 @@ figcaption[data-rehype-pretty-code-title] + pre {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1em 0;
+  margin-block: 1em;
+  margin-inline: auto;
 }
 
 /* 水平線 */
