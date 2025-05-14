@@ -1,7 +1,8 @@
 ---
-title: サイトをリニューアルしました
-description: 'サイトをリニューアルしたんです'
-thumbnail: ''
+title: "サイトをリニューアルしました"
+description: "サイトをリニューアルしたんです"
+thumbnail: null
+audio: null
 createdAt: 2025-05-10
 updatedAt: 2025-05-10
 ---

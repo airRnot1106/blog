@@ -2,6 +2,7 @@ import type { BlogArticle } from './schemas';
 
 export const blogArticles = [
   {
+    audio: null,
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     createdAt: new Date('2023-01-01T00:00:00Z'),
