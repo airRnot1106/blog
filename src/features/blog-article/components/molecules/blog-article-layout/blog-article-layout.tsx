@@ -6,6 +6,9 @@ import { Datetime } from '../../../../datetime/components/atoms/datetime';
 import type { BlogArticle } from '../../../schemas';
 
 import '../../../styles.css';
+import { Heading } from '../../../../../components/atoms/heading';
+import { BlogArticlePodcastAudio } from '../../../../blog-article-podcast/components/atoms/blog-article-podcast-audio';
+import { BlogArticlePodcastSection } from '../../../../blog-article-podcast/components/molecules/blog-article-podcast-section';
 import { SITE_NAME, SITE_URL } from '../../../../site/consts';
 import { SocialShareLinkButtonList } from '../../../../social/components/molecules/social-share-link-button-list';
 
@@ -16,7 +19,7 @@ export type BlogArticleLayoutProps = ComponentProps<'div'> & {
 };
 
 export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
-  article: { createdAt, description, slug, thumbnail, title, updatedAt },
+  article: { audio, createdAt, description, slug, thumbnail, title, updatedAt },
   blogArticleTocNavigationSection,
   children,
   className,
@@ -111,6 +114,33 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
           {title}
         </h1>
         {description !== '' && <p>{description}</p>}
+        {audio != null && (
+          <BlogArticlePodcastSection
+            audio={<BlogArticlePodcastAudio slug="4029abffbdbdfad8" />}
+            className={css({
+              backgroundColor: 'surface',
+              borderRadius: '4xl',
+              paddingBlock: '1rem',
+              paddingInline: '2rem',
+              marginTop: '1rem',
+            })}
+            heading={
+              <Heading
+                as="h2"
+                className={css({
+                  '& > h2': {
+                    fontSize: 'xl',
+                  },
+                  '& > p': {
+                    fontSize: 'md',
+                  },
+                })}
+                subtitle="ぽっどきゃすと"
+                title="Podcast"
+              />
+            }
+          />
+        )}
       </div>
       <div
         className={css({
