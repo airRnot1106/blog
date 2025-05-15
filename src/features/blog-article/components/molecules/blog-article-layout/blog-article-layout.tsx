@@ -9,7 +9,7 @@ import '../../../styles.css';
 import { Heading } from '../../../../../components/atoms/heading';
 import { BlogArticlePodcastAudio } from '../../../../blog-article-podcast/components/atoms/blog-article-podcast-audio';
 import { BlogArticlePodcastSection } from '../../../../blog-article-podcast/components/molecules/blog-article-podcast-section';
-import { SITE_NAME, SITE_URL } from '../../../../site/consts';
+import { SITE_URL } from '../../../../site/consts';
 import { SocialShareLinkButtonList } from '../../../../social/components/molecules/social-share-link-button-list';
 
 export type BlogArticleLayoutProps = ComponentProps<'div'> & {
@@ -101,7 +101,7 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
           </div>
           <SocialShareLinkButtonList
             direction="horizontal"
-            text={`${title} | ${SITE_NAME}`}
+            text={`${title} | airRnot.​dev`}
             url={`${SITE_URL}/articles/${slug}`}
           />
         </div>
