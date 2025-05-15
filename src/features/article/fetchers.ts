@@ -26,7 +26,7 @@ export const getArticles = async () => {
       const ogImage = matchResult(
         await getOgp(article.href),
         ({ result }) => result.ogImage.url,
-        () => '/images/article/fallback.webp',
+        () => '/images/articles/fallback.webp',
       );
       return {
         ...article,

@@ -9,7 +9,7 @@ export const blogArticles = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     file: 'blog-article-1.md',
     slug: 'blog-article-1',
-    thumbnail: '/images/article/fallback.webp',
+    thumbnail: '/images/articles/fallback.webp',
     title: 'Blog Article 1',
     updatedAt: new Date('2024-01-01T00:00:00Z'),
   },
