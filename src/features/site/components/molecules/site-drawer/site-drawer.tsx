@@ -75,7 +75,6 @@ export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
               color: 'text',
               backgroundColor: 'base',
               borderRadius: 'md',
-              paddingBlock: '1.25rem',
             })}
           >
             <div
@@ -98,7 +97,6 @@ export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
               className={css({
                 borderBottom: '1px solid',
                 borderBottomColor: 'muted/20',
-                paddingBottom: '1.25rem',
               })}
             >
               <SiteNavigationLinkList
