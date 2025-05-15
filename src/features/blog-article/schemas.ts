@@ -18,8 +18,8 @@ export const blogArticleSchema = z.object({
     .nullable()
     .transform((value) =>
       value === '' || value != null
-        ? `/images/contents/${value}`
-        : '/images/article/fallback.webp',
+        ? `/images/articles/${value}`
+        : '/images/articles/fallback.webp',
     ),
   title: z.string(),
   updatedAt: z.date(),
