@@ -24,7 +24,7 @@ export const SiteNavigationLink: FC<SiteNavigationLinkProps> = ({
           gridTemplateColumns: 'auto 1fr',
           alignItems: 'center',
           columnGap: '0.875rem',
-          paddingBlock: '0.5rem',
+          paddingBlock: '1.25rem',
           paddingInline: '1.25rem',
           _hover: {
             backgroundColor:
