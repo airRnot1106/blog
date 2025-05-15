@@ -108,8 +108,8 @@ export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
             </nav>
             <SiteUtilityList
               className={css({
-                justifySelf: 'center',
                 paddingTop: '1.25rem',
+                marginInline: 'auto',
               })}
             />
           </div>
