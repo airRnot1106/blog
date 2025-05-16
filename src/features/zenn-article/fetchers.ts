@@ -1,11 +1,12 @@
 import 'server-only';
 
+import { cache } from 'react';
 import { err, ok } from '../../utils/result';
 import { getZennArticlesSchema } from './schemas';
 
 const BASE_URL = 'https://zenn.dev/api';
 
-export const getZennArticles = async () => {
+export const getZennArticles = cache(async () => {
   const res = await fetch(
     `${BASE_URL}/articles?username=airrnot1106&order=latest`,
     {
@@ -42,4 +43,4 @@ export const getZennArticles = async () => {
     status: res.status,
     data: result.data,
   });
-};
+});

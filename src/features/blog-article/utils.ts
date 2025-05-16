@@ -1,10 +1,13 @@
+import 'server-only';
+
 import fs from 'node:fs/promises';
 import matter from 'gray-matter';
+import { cache } from 'react';
 import { err, ok } from '../../utils/result';
 import { ARTICLE_PATH } from './consts';
 import { type BlogArticle, blogArticleSchema } from './schemas';
 
-export const getBlogArticles = async () => {
+export const getBlogArticles = cache(async () => {
   const files = await fs.readdir(ARTICLE_PATH);
 
   const articles = await Promise.all(
@@ -33,9 +36,9 @@ export const getBlogArticles = async () => {
   }
 
   return ok(result.data);
-};
+});
 
-export const getBlogArticleBySlug = async (slug: BlogArticle['slug']) => {
+export const getBlogArticleBySlug = cache(async (slug: BlogArticle['slug']) => {
   const result = await getBlogArticles();
 
   if (!result.ok) {
@@ -49,4 +52,4 @@ export const getBlogArticleBySlug = async (slug: BlogArticle['slug']) => {
   }
 
   return ok(article);
-};
+});

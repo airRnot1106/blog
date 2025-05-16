@@ -1,11 +1,12 @@
 import 'server-only';
 
+import { cache } from 'react';
 import { err, ok } from '../../utils/result';
 import { getQiitaArticlesSchema } from './schemas';
 
 const BASE_URL = 'https://qiita.com/api/v2';
 
-export const getQiitaArticles = async () => {
+export const getQiitaArticles = cache(async () => {
   const res = await fetch(`${BASE_URL}/authenticated_user/items`, {
     method: 'GET',
     headers: {
@@ -40,4 +41,4 @@ export const getQiitaArticles = async () => {
     status: res.status,
     data: result.data,
   });
-};
+});
