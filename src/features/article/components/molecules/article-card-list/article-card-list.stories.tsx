@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { css } from '../../../../../../styled-system/css';
 import { articles } from '../../../mocks';
-import { ArticleCardListPresentational } from './article-card-list.presentational';
+import { ArticleCardList } from './article-card-list';
 
-const meta: Meta<typeof ArticleCardListPresentational> = {
-  component: ArticleCardListPresentational,
+const meta: Meta<typeof ArticleCardList> = {
+  component: ArticleCardList,
   tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
@@ -24,15 +24,15 @@ const meta: Meta<typeof ArticleCardListPresentational> = {
 
 export default meta;
 
-type Story = StoryObj<typeof ArticleCardListPresentational>;
+type Story = StoryObj<typeof ArticleCardList>;
 
 export const Default: Story = {
   render: () => {
-    return <ArticleCardListPresentational articles={articles} />;
+    return <ArticleCardList articles={articles} />;
   },
 };
 
-const Component = <ArticleCardListPresentational articles={articles} />;
+const Component = <ArticleCardList articles={articles} />;
 
 export const XSmall: Story = {
   tags: ['!autodocs'],
