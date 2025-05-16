@@ -58,28 +58,26 @@ export const HPNTPagination: FC<HPNTPaginationProps> = ({
           columnGap: '1rem',
         })}
       >
-        {currentPage > 1 && (
-          <>
-            <LinkButton
-              aria-label="最初のページへ"
-              href={head}
-              size={linkButtonSize}
-              variant="normal"
-            >
-              <ChevronFirst className={linkButtonStyle} size={iconSize} />
-            </LinkButton>
-            <LinkButton
-              className={linkButtonStyle}
-              href={prev}
-              icon={<ChevronLeft size={iconSize} />}
-              iconPosition="left"
-              size={linkButtonSize}
-              variant="normal"
-            >
-              前のページへ
-            </LinkButton>
-          </>
-        )}
+        <LinkButton
+          aria-label="最初のページへ"
+          disabled={currentPage <= 1}
+          href={head}
+          size={linkButtonSize}
+          variant="normal"
+        >
+          <ChevronFirst className={linkButtonStyle} size={iconSize} />
+        </LinkButton>
+        <LinkButton
+          className={linkButtonStyle}
+          disabled={currentPage <= 1}
+          href={prev}
+          icon={<ChevronLeft size={iconSize} />}
+          iconPosition="left"
+          size={linkButtonSize}
+          variant="normal"
+        >
+          前のページへ
+        </LinkButton>
         <span
           className={css({
             fontWeight: 'bold',
@@ -87,28 +85,26 @@ export const HPNTPagination: FC<HPNTPaginationProps> = ({
         >
           {currentPage}
         </span>
-        {currentPage < totalPage && (
-          <>
-            <LinkButton
-              className={linkButtonStyle}
-              href={next}
-              icon={<ChevronRight size={iconSize} />}
-              iconPosition="right"
-              size={linkButtonSize}
-              variant="normal"
-            >
-              次のページへ
-            </LinkButton>
-            <LinkButton
-              aria-label="最後のページへ"
-              href={tail}
-              size={linkButtonSize}
-              variant="normal"
-            >
-              <ChevronLast className={linkButtonStyle} size={iconSize} />
-            </LinkButton>
-          </>
-        )}
+        <LinkButton
+          className={linkButtonStyle}
+          disabled={currentPage >= totalPage}
+          href={next}
+          icon={<ChevronRight size={iconSize} />}
+          iconPosition="right"
+          size={linkButtonSize}
+          variant="normal"
+        >
+          次のページへ
+        </LinkButton>
+        <LinkButton
+          aria-label="最後のページへ"
+          disabled={currentPage >= totalPage}
+          href={tail}
+          size={linkButtonSize}
+          variant="normal"
+        >
+          <ChevronLast className={linkButtonStyle} size={iconSize} />
+        </LinkButton>
       </div>
     </nav>
   );
