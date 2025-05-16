@@ -1,12 +1,18 @@
 import {
   ErrorFetchResultMessage,
   type ErrorFetchResultMessageProps,
+  NotFoundFetchResultMessage,
+  type NotFoundFetchResultMessageProps,
 } from './_variant';
 
-export type FetchResultMessageVariant = 'error';
+export type FetchResultMessageVariant = 'error' | 'not-found';
 
 export type FetchResultMessageProps<T extends FetchResultMessageVariant> =
-  T extends 'error' ? ErrorFetchResultMessageProps & { variant: T } : never;
+  T extends 'error'
+    ? ErrorFetchResultMessageProps & { variant: T }
+    : T extends 'not-found'
+      ? NotFoundFetchResultMessageProps & { variant: T }
+      : never;
 
 export const FetchResultMessage = <T extends FetchResultMessageVariant>(
   props: FetchResultMessageProps<T>,
@@ -15,8 +21,11 @@ export const FetchResultMessage = <T extends FetchResultMessageVariant>(
     case 'error': {
       return <ErrorFetchResultMessage {...props} />;
     }
+    case 'not-found': {
+      return <NotFoundFetchResultMessage {...props} />;
+    }
     default: {
-      return props.variant satisfies never;
+      return props satisfies never;
     }
   }
 };
