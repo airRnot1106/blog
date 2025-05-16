@@ -1,5 +1,6 @@
 import 'server-only';
 
+import { cache } from 'react';
 import { isBefore } from '../../utils/date';
 import { getOgp } from '../../utils/ogp';
 import { shouldNeverHappen } from '../../utils/panic-helper';
@@ -16,7 +17,7 @@ export type GetArticlesParams = {
 
 const DEFAULT_PER_PAGE = 10;
 
-export const getArticles = async (params?: GetArticlesParams) => {
+export const getArticles = cache(async (params?: GetArticlesParams) => {
   const { page = 1, perPage = DEFAULT_PER_PAGE } = params ?? {};
 
   const [blogResult, qiitaResult, zennResult] = await Promise.all([
@@ -63,4 +64,4 @@ export const getArticles = async (params?: GetArticlesParams) => {
     perPage,
     totalPage: Math.ceil(finalArticles.length / perPage),
   };
-};
+});
