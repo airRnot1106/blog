@@ -30,6 +30,11 @@ const withMDX = createMDX({
 const nextConfig: NextConfig = withBundleAnalyzer(
   withMDX({
     /* config options here */
+    logging: {
+      fetches: {
+        fullUrl: true,
+      },
+    },
     images: {
       remotePatterns: [
         {
