@@ -77,3 +77,13 @@ export const Icon: Story = {
     );
   },
 };
+
+export const Disabled: Story = {
+  render: () => {
+    return (
+      <LinkButton disabled href="#" size="md">
+        Button
+      </LinkButton>
+    );
+  },
+};
