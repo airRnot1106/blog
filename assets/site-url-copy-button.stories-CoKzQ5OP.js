@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-DoEZbXM1.js";import{c as i}from"./css-iA79nXp1.js";import{S as p}from"./consts-DWZnzKng.js";import{S as m}from"./site-url-copy-button-C0cXTSbx.js";import"./jsx-runtime-Bw5QeaCk.js";import"./newspaper-AlF7AAQn.js";import"./createLucideIcon-dVToDc26.js";import"./index-DDr4uD8U.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Za3YRiuF.js";import"./cx-BFURdk0p.js";import"./button-abs7jE4F.js";import"./ghost-button-DVSEpKed.js";import"./button-CFgMdbM0.js";import"./cva-CuDB4TaM.js";import"./normal-button-Be3dRcwo.js";const B={component:m,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[a=>t.jsx("div",{className:i({padding:"1rem"}),children:t.jsx(a,{})})]},r={render:()=>t.jsx(m,{url:`${p}/articles/imhere`})};var o,e,s;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: () => {
+    return <SiteUrlCopyButton url={\`\${SITE_URL}/articles/imhere\`} />;
+  }
+}`,...(s=(e=r.parameters)==null?void 0:e.docs)==null?void 0:s.source}}};const C=["Default"];export{r as Default,C as __namedExportsOrder,B as default};

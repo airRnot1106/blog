@@ -1,0 +1,1 @@
+import{j as a}from"./jsx-runtime-DoEZbXM1.js";import{H as n}from"./h-p-n-t-pagination-BMX406gp.js";const i=t=>{switch(t.variant){case"h-p-n-t":return a.jsx(n,{...t});default:return t.variant}};i.__docgenInfo={description:"",methods:[],displayName:"Pagination"};export{i as P};
