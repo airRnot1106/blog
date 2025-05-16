@@ -14,7 +14,7 @@ const meta: Meta<typeof ArticleSection> = {
     nextjs: {
       appDirectory: true,
       navigation: {
-        pathname: '/articles',
+        pathname: '/articles/page',
       },
     },
   },
@@ -48,7 +48,12 @@ export const Default: Story = {
       <ArticleSection>
         <ArticleCardPaginationListPresentational
           pagination={
-            <Pagination currentPage={2} totalPage={4} variant="h-p-n-t" />
+            <Pagination
+              currentPage={2}
+              href="/articles/page"
+              totalPage={4}
+              variant="h-p-n-t"
+            />
           }
         >
           <ArticleCardList articles={articles} />
@@ -62,7 +67,12 @@ const Component = (
   <ArticleSection>
     <ArticleCardPaginationListPresentational
       pagination={
-        <Pagination currentPage={2} totalPage={4} variant="h-p-n-t" />
+        <Pagination
+          currentPage={2}
+          href="/articles/page"
+          totalPage={4}
+          variant="h-p-n-t"
+        />
       }
     >
       <ArticleCardList articles={articles} />

@@ -11,7 +11,7 @@ const meta: Meta<typeof HPNTPagination> = {
     nextjs: {
       appDirectory: true,
       navigation: {
-        pathname: '/articles',
+        pathname: '/articles/page',
       },
     },
   },
@@ -35,7 +35,7 @@ type Story = StoryObj<typeof HPNTPagination>;
 const props = {
   currentPage: 2,
   totalPage: 4,
-  href: '/articles',
+  href: '/articles/page',
 };
 
 export const Default: Story = {
@@ -68,10 +68,10 @@ export const Default: Story = {
     const nextButtonUrl = nextButton.getAttribute('href');
     const tailButtonUrl = tailButton.getAttribute('href');
 
-    expect(headButtonUrl).toBe(`${props.href}?page=1`);
-    expect(prevButtonUrl).toBe(`${props.href}?page=${props.currentPage - 1}`);
-    expect(nextButtonUrl).toBe(`${props.href}?page=${props.currentPage + 1}`);
-    expect(tailButtonUrl).toBe(`${props.href}?page=${props.totalPage}`);
+    expect(headButtonUrl).toBe(`${props.href}/1`);
+    expect(prevButtonUrl).toBe(`${props.href}/${props.currentPage - 1}`);
+    expect(nextButtonUrl).toBe(`${props.href}/${props.currentPage + 1}`);
+    expect(tailButtonUrl).toBe(`${props.href}/${props.totalPage}`);
   },
 };
 
@@ -87,7 +87,7 @@ export const Head: Story = {
     const props = {
       currentPage: 1,
       totalPage: 4,
-      href: '/articles',
+      href: '/articles/page',
     };
     return <HPNTPagination {...props} />;
   },
@@ -105,7 +105,7 @@ export const Tail: Story = {
     const props = {
       currentPage: 4,
       totalPage: 4,
-      href: '/articles',
+      href: '/articles/page',
     };
     return <HPNTPagination {...props} />;
   },

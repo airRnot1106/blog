@@ -1,17 +1,15 @@
-'use client';
-
 import {
   ChevronFirst,
   ChevronLast,
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react';
-import { usePathname, useSearchParams } from 'next/navigation';
 import type { FC } from 'react';
 import { css } from '../../../../../../../styled-system/css';
 import { LinkButton } from '../../../../link-button';
 
 export type HPNTPaginationProps = {
+  href: string;
   currentPage: number;
   totalPage: number;
   className?: string | undefined;
@@ -26,27 +24,15 @@ const linkButtonSize = 'sm';
 const iconSize = 18;
 
 export const HPNTPagination: FC<HPNTPaginationProps> = ({
+  href,
   currentPage,
   totalPage,
   className,
 }) => {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const params = new URLSearchParams(searchParams.toString());
-  params.set('page', '1');
-  const head = `${pathname}?${params.toString()}`;
-  params.set(
-    'page',
-    currentPage > totalPage
-      ? totalPage.toString()
-      : (currentPage - 1).toString(),
-  );
-  const prev = `${pathname}?${params.toString()}`;
-  params.set('page', (currentPage + 1).toString());
-  const next = `${pathname}?${params.toString()}`;
-  params.set('page', totalPage.toString());
-  const tail = `${pathname}?${params.toString()}`;
+  const head = `${href}/1`;
+  const prev = `${href}/${currentPage > totalPage ? totalPage : currentPage - 1}`;
+  const next = `${href}/${currentPage + 1}`;
+  const tail = `${href}/${totalPage}`;
 
   return (
     <nav className={className}>
