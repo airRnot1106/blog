@@ -1,0 +1,1 @@
+import{j as s}from"./jsx-runtime-DoEZbXM1.js";import{F as t}from"./fetch-result-message-CcDV5fLZ.js";const o=({children:e,...r})=>s.jsx(t,{...r,children:e??s.jsx("span",{children:"情報の取得に失敗しました"})});o.__docgenInfo={description:"",methods:[],displayName:"ErrorFetchResultMessage",props:{children:{required:!1,tsType:{name:"ReactNode"},description:""}}};export{o as E};
