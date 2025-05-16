@@ -4,7 +4,7 @@ export const articleSchema = z.object({
   id: z.string(),
   title: z.string(),
   href: z.string(),
-  createdAt: z.date(),
+  createdAt: z.coerce.date(),
   isExternalSite: z.boolean(),
   src: z.string(),
 });

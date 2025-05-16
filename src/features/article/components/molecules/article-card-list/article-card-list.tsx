@@ -2,13 +2,15 @@ import type { ComponentProps, FC } from 'react';
 import { css, cx } from '../../../../../../styled-system/css';
 import { ArticleCard, type ArticleCardProps } from '../article-card';
 
-export type ArticleCardListPresentationalProps = ComponentProps<'ul'> & {
+export type ArticleCardListProps = ComponentProps<'ul'> & {
   articles: ArticleCardProps['article'][];
 };
 
-export const ArticleCardListPresentational: FC<
-  ArticleCardListPresentationalProps
-> = ({ articles, className, ...rest }) => {
+export const ArticleCardList: FC<ArticleCardListProps> = ({
+  articles,
+  className,
+  ...rest
+}) => {
   return (
     <ul
       className={cx(
