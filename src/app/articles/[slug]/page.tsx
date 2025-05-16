@@ -69,7 +69,7 @@ export default async function Article({ params }: Params) {
     <SiteBreadcrumbLayout
       items={[
         { label: 'TOP', href: '/' },
-        { label: '記事一覧', href: '/articles' },
+        { label: '記事一覧', href: '/articles/page/1' },
         { label: article.title, href: `/articles/${article.slug}` },
       ]}
     >

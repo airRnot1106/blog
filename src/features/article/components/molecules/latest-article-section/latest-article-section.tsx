@@ -32,7 +32,7 @@ export const LatestArticleSection: FC<LatestArticleSectionProps> = ({
         })}
       >
         <LinkButton
-          href="/articles"
+          href="/articles/page/1"
           icon={<ArrowRight />}
           iconPosition="right"
           variant="normal"

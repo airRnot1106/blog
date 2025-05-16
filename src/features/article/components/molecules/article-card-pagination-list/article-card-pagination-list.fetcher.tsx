@@ -25,6 +25,7 @@ export const ArticleCardPaginationListFetcher: FC<
       pagination={
         <Pagination
           currentPage={currentPage}
+          href="/articles/page"
           totalPage={totalPage}
           variant="h-p-n-t"
         />

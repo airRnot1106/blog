@@ -11,7 +11,7 @@ export const SITE_NAVIGATION_LINKS = [
   {
     id: 1,
     label: '記事一覧',
-    href: '/articles',
+    href: '/articles/page/1',
     icon: <Newspaper size="28" />,
   },
 ] as const satisfies SiteNavigationLink[];

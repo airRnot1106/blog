@@ -10,7 +10,7 @@ const meta: Meta<typeof Pagination> = {
     nextjs: {
       appDirectory: true,
       navigation: {
-        pathname: '/articles',
+        pathname: '/articles/page',
       },
     },
   },
@@ -43,7 +43,7 @@ export const Default: Story = {
     const props = {
       currentPage: 2,
       totalPage: 4,
-      href: '/articles',
+      href: '/articles/page',
     };
     return <Pagination variant="h-p-n-t" {...props} />;
   },
