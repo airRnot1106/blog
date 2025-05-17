@@ -1,1 +1,0 @@
-import{j as e}from"./jsx-runtime-DoEZbXM1.js";import{H as n}from"./heading-CsMin62-.js";import{A as r}from"./anchor-heading-BdPI4WXK.js";const t=a=>{switch(a.variant){case"anchor":return e.jsx(r,{...a});case void 0:return e.jsx(n,{...a});default:return a}};t.__docgenInfo={description:"",methods:[],displayName:"Heading"};export{t as H};
