@@ -2,6 +2,7 @@ import { Newspaper } from 'lucide-react';
 import type { SiteNavigationLink } from './types';
 
 export const SITE_NAME = 'airRnot.dev';
+export const UNLINKABLE_SITE_NAME = 'airRnot.​dev';
 export const SITE_DESCRIPTION =
   'airRnotのブログです。主にフロントエンドに関する記事をまとめています。';
 export const SITE_DOMAIN = 'airrnot.dev';
