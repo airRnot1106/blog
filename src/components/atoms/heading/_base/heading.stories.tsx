@@ -31,6 +31,7 @@ export const Anchor: Story = {
       <Heading
         as="h1"
         href="#タイトル"
+        size="clamp"
         subtitle="さぶたいとる"
         title="タイトル"
         variant="anchor"
@@ -41,6 +42,8 @@ export const Anchor: Story = {
 
 export const Normal: Story = {
   render: () => {
-    return <Heading as="h1" subtitle="さぶたいとる" title="タイトル" />;
+    return (
+      <Heading as="h1" size="clamp" subtitle="さぶたいとる" title="タイトル" />
+    );
   },
 };

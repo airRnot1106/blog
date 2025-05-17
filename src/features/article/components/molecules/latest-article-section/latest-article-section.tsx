@@ -15,7 +15,12 @@ export const LatestArticleSection: FC<LatestArticleSectionProps> = ({
 }) => {
   return (
     <section className={className} {...rest}>
-      <Heading as="h2" subtitle="さいきんかいたやつ" title="最新の記事" />
+      <Heading
+        as="h2"
+        size="clamp"
+        subtitle="さいきんかいたやつ"
+        title="最新の記事"
+      />
       <div
         className={css({
           display: 'grid',

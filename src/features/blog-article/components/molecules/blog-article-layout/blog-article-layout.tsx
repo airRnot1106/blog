@@ -127,14 +127,7 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
             heading={
               <Heading
                 as="h2"
-                className={css({
-                  '& > h2': {
-                    fontSize: 'xl',
-                  },
-                  '& > p': {
-                    fontSize: 'md',
-                  },
-                })}
+                size="sm"
                 subtitle="ぽっどきゃすと"
                 title="Podcast"
               />

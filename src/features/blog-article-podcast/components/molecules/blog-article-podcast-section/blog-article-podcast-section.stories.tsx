@@ -32,7 +32,14 @@ export const Default: Story = {
     return (
       <BlogArticlePodcastSection
         audio={<BlogArticlePodcastAudio slug="4029abffbdbdfad8" />}
-        heading={<Heading as="h2" subtitle="ぽっどきゃすと" title="Podcast" />}
+        heading={
+          <Heading
+            as="h2"
+            size="clamp"
+            subtitle="ぽっどきゃすと"
+            title="Podcast"
+          />
+        }
       />
     );
   },

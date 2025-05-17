@@ -11,7 +11,12 @@ export const AttendedEventSection: FC<AttendedEventSection> = ({
 }) => {
   return (
     <section className={className} {...rest}>
-      <Heading as="h2" subtitle="さんかいべんと" title="参加イベント" />
+      <Heading
+        as="h2"
+        size="clamp"
+        subtitle="さんかいべんと"
+        title="参加イベント"
+      />
       <div
         className={css({
           display: 'grid',

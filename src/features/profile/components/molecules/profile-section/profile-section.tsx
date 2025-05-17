@@ -13,7 +13,7 @@ export const ProfileSection: FC<ProfileSectionProps> = ({
 }) => {
   return (
     <section className={cx(className)} {...rest}>
-      <Heading as="h2" subtitle="about" title="About" />
+      <Heading as="h2" size="clamp" subtitle="about" title="About" />
       <div
         className={css({
           display: 'grid',

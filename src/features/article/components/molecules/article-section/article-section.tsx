@@ -13,7 +13,12 @@ export const ArticleSection: FC<ArticleSectionProps> = ({
 }) => {
   return (
     <section className={className} {...rest}>
-      <Heading as="h2" subtitle="わたしがかきました" title="記事一覧" />
+      <Heading
+        as="h2"
+        size="clamp"
+        subtitle="わたしがかきました"
+        title="記事一覧"
+      />
       <div
         className={css({
           display: 'grid',

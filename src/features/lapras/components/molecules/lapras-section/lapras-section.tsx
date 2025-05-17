@@ -15,7 +15,7 @@ export const LaprasSection: FC<LaprasSectionProps> = ({
 }) => {
   return (
     <section className={className} {...rest}>
-      <Heading as="h2" subtitle="lapras" title="Lapras" />
+      <Heading as="h2" size="clamp" subtitle="lapras" title="Lapras" />
       <div
         className={css({
           display: 'grid',
