@@ -1,1 +1,0 @@
-import{j as s}from"./jsx-runtime-DoEZbXM1.js";import{N as t}from"./newspaper-AlF7AAQn.js";const e="airRnot.dev",o="airrnot.dev",i=`https://${o}`,n=[{id:1,label:"記事一覧",href:"/articles/page/1",icon:s.jsx(t,{size:"28"})}];export{i as S,e as a,n as b};
