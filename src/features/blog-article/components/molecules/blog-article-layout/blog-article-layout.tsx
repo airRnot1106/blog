@@ -58,8 +58,13 @@ export const BlogArticleLayout: FC<BlogArticleLayoutProps> = ({
         <div
           className={css({
             display: 'inline-grid',
-            gridAutoFlow: 'column',
+            gridAutoFlow: {
+              base: 'row',
+              sm: 'column',
+            },
             alignItems: 'center',
+            justifyItems: 'flex-start',
+            rowGap: '0.5rem',
             columnGap: '2.5rem',
             marginTop: '0.5rem',
             width: 'fit-content',
