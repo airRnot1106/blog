@@ -68,13 +68,8 @@ export const BlogArticleTocNavigationSectionPresentational: FC<
         as="h2"
         className={css({
           width: 'fit-content',
-          '& > h2': {
-            fontSize: 'xl',
-          },
-          '& > p': {
-            fontSize: 'md',
-          },
         })}
+        size="sm"
         subtitle="もくじ"
         title="目次"
       />

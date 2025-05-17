@@ -25,6 +25,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         <Heading
           as="h1"
           href={`#${title}`}
+          size="clamp"
           subtitle={subtitle}
           title={title}
           variant="anchor"
@@ -38,6 +39,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         <Heading
           as="h2"
           href={`#${title}`}
+          size="clamp"
           subtitle={subtitle}
           title={title}
           variant="anchor"
@@ -51,6 +53,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         <Heading
           as="h3"
           href={`#${title}`}
+          size="clamp"
           subtitle={subtitle}
           title={title}
           variant="anchor"
@@ -64,6 +67,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         <Heading
           as="h4"
           href={`#${title}`}
+          size="clamp"
           subtitle={subtitle}
           title={title}
           variant="anchor"
@@ -77,6 +81,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         <Heading
           as="h5"
           href={`#${title}`}
+          size="clamp"
           subtitle={subtitle}
           title={title}
           variant="anchor"
@@ -90,6 +95,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         <Heading
           as="h6"
           href={`#${title}`}
+          size="clamp"
           subtitle={subtitle}
           title={title}
           variant="anchor"
