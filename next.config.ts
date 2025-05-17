@@ -1,6 +1,7 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
 import createMDX from '@next/mdx';
 import type { NextConfig } from 'next';
+import rehypeMermaid from 'rehype-mermaid';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkBreaks from 'remark-breaks';
 import remarkFrontmatter from 'remark-frontmatter';
@@ -16,6 +17,7 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [remarkBreaks, remarkFrontmatter, remarkGfm],
     rehypePlugins: [
+      rehypeMermaid,
       [
         rehypePrettyCode,
         {
