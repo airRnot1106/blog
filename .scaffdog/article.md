@@ -11,7 +11,8 @@ output: '.'
 ---
 title: ""
 description: ""
-thumbnail: ""
+thumbnail: null
+audio: null
 createdAt: {{ date "YYYY-MM-DD" }}
 updatedAt: {{ date "YYYY-MM-DD" }}
 ---
