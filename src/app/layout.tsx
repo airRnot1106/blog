@@ -15,8 +15,6 @@ export const metadata: Metadata = {
     default: SITE_NAME,
   },
   description: SITE_DESCRIPTION,
-  icons:
-    'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✈️</text></svg>',
   alternates: {
     types: {
       'application/rss+xml': `${SITE_URL}/articles/feed.xml`,
