@@ -62,7 +62,13 @@ export const HPNTPagination: FC<HPNTPaginationProps> = ({
           size={linkButtonSize}
           variant="normal"
         >
-          前のページへ
+          <span
+            className={css({
+              hideBelow: 'sm',
+            })}
+          >
+            前のページへ
+          </span>
         </LinkButton>
         <span
           className={css({
@@ -80,7 +86,13 @@ export const HPNTPagination: FC<HPNTPaginationProps> = ({
           size={linkButtonSize}
           variant="normal"
         >
-          次のページへ
+          <span
+            className={css({
+              hideBelow: 'sm',
+            })}
+          >
+            次のページへ
+          </span>
         </LinkButton>
         <LinkButton
           aria-label="最後のページへ"
