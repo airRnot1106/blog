@@ -1,3 +1,4 @@
+import * as fc from 'fast-check';
 import {
   afterEach,
   beforeEach,
@@ -11,7 +12,7 @@ import { shouldNeverHappen } from './panic-helper';
 
 const ORIGINAL_ENV = process.env.NODE_ENV ?? '';
 
-describe('shouldNeverHappen()', () => {
+describe('panic-helper', () => {
   let errorSpy: ReturnType<typeof vi.spyOn>;
 
   beforeEach(() => {
@@ -25,32 +26,71 @@ describe('shouldNeverHappen()', () => {
     vi.restoreAllMocks();
   });
 
-  it('NODE_ENVがproductionのとき例外を投げる', () => {
-    expect.assertions(2);
-    // @ts-expect-error
-    process.env.NODE_ENV = 'production';
+  describe('shouldNeverHappen()', () => {
+    it('任意の環境で常に例外を投げる', () => {
+      fc.assert(
+        fc.property(
+          fc.constantFrom('production', 'development', 'test', 'staging'),
+          fc.string({ minLength: 1 }),
+          (env, message) => {
+            // @ts-expect-error
+            process.env.NODE_ENV = env;
 
-    // 本体の挙動
-    const call = () => shouldNeverHappen('fatal', { code: 123 });
+            const call = () => shouldNeverHappen(message);
 
-    expect(call).toThrowError('This should never happen: fatal');
-    expect(errorSpy).toHaveBeenCalledWith('fatal', { code: 123 });
-  });
+            expect(call).toThrowError(`This should never happen: ${message}`);
+            expect(errorSpy).toHaveBeenCalledWith(message);
 
-  it('NODE_ENVがproductionではなくても例外を投げる', () => {
-    expect.assertions(2);
-    // @ts-expect-error
-    process.env.NODE_ENV = 'development';
+            errorSpy.mockClear();
+          },
+        ),
+      );
+    });
 
-    const call = () => shouldNeverHappen('dev-path');
+    it('追加パラメータと共に任意の環境で常に例外を投げる', () => {
+      fc.assert(
+        fc.property(
+          fc.constantFrom('production', 'development', 'test'),
+          fc.string({ minLength: 1 }),
+          fc.record({
+            code: fc.integer(),
+            data: fc.string(),
+            flag: fc.boolean(),
+          }),
+          (env, message, additionalData) => {
+            // @ts-expect-error
+            process.env.NODE_ENV = env;
 
-    expect(call).toThrowError('This should never happen: dev-path');
-    expect(errorSpy).toHaveBeenCalledWith('dev-path');
-  });
+            const call = () => shouldNeverHappen(message, additionalData);
 
-  it('戻り値型がneverであることをコンパイル時に保証する', () => {
-    expect.assertions(0);
-    type Return = ReturnType<typeof shouldNeverHappen>;
-    expectTypeOf<Return>().toEqualTypeOf<never>();
+            expect(call).toThrowError(`This should never happen: ${message}`);
+            expect(errorSpy).toHaveBeenCalledWith(message, additionalData);
+
+            errorSpy.mockClear();
+          },
+        ),
+      );
+    });
+
+    it('戻り値型がneverであることをコンパイル時に保証する', () => {
+      type Return = ReturnType<typeof shouldNeverHappen>;
+      expectTypeOf<Return>().toEqualTypeOf<never>();
+    });
+
+    it('固定値での動作確認', () => {
+      // @ts-expect-error
+      process.env.NODE_ENV = 'production';
+      const call1 = () => shouldNeverHappen('fatal', { code: 123 });
+      expect(call1).toThrowError('This should never happen: fatal');
+      expect(errorSpy).toHaveBeenCalledWith('fatal', { code: 123 });
+
+      errorSpy.mockClear();
+
+      // @ts-expect-error
+      process.env.NODE_ENV = 'development';
+      const call2 = () => shouldNeverHappen('dev-path');
+      expect(call2).toThrowError('This should never happen: dev-path');
+      expect(errorSpy).toHaveBeenCalledWith('dev-path');
+    });
   });
 });
