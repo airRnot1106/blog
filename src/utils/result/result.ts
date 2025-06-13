@@ -41,7 +41,7 @@ export const matchResult = <T, U, E, D>(
   return errorFn(result.error);
 };
 
-export const unwrapResult = <T, E>(result: Result<T, E>) => {
+export const unsafeUnwrapResult = <T, E>(result: Result<T, E>) => {
   if (result.ok) {
     return [result.data, undefined] as const;
   }
