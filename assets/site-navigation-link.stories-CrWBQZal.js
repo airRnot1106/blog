@@ -1,5 +1,0 @@
-import{j as t}from"./jsx-runtime-DoEZbXM1.js";import{c as m}from"./css-iA79nXp1.js";import{s as n}from"./mocks-Bt4mMx91.js";import{S as s}from"./site-navigation-link-DMIFXQJw.js";import"./jsx-runtime-Bw5QeaCk.js";import"./newspaper-AlF7AAQn.js";import"./createLucideIcon-dVToDc26.js";import"./index-DDr4uD8U.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Za3YRiuF.js";import"./link-CiQcZn3-.js";import"./router-context.shared-runtime-C3rDQPqq.js";import"./add-base-path-Yz4dcL5G.js";import"./use-merged-ref-vu_KmdPm.js";import"./cx-BFURdk0p.js";const E={component:s,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[a=>t.jsx("div",{className:m({padding:"1rem"}),children:t.jsx(a,{})})]},r={render:()=>t.jsx(s,{link:n[0]})};var o,i,e;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
-  render: () => {
-    return <SiteNavigationLink link={siteNavigationLinks[0]} />;
-  }
-}`,...(e=(i=r.parameters)==null?void 0:i.docs)==null?void 0:e.source}}};const _=["Default"];export{r as Default,_ as __namedExportsOrder,E as default};

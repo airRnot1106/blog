@@ -1,9 +1,0 @@
-import{j as o}from"./jsx-runtime-DoEZbXM1.js";import{c as u}from"./css-iA79nXp1.js";import{s as c}from"./mocks-Bt4mMx91.js";import{S as i}from"./site-navigation-link-list-BwsRxNEu.js";import"./jsx-runtime-Bw5QeaCk.js";import"./newspaper-AlF7AAQn.js";import"./createLucideIcon-dVToDc26.js";import"./index-DDr4uD8U.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Za3YRiuF.js";import"./anchor-site-navigation-link-list-Cnl8d6G5.js";import"./site-navigation-link-DMIFXQJw.js";import"./link-CiQcZn3-.js";import"./router-context.shared-runtime-C3rDQPqq.js";import"./add-base-path-Yz4dcL5G.js";import"./use-merged-ref-vu_KmdPm.js";import"./cx-BFURdk0p.js";import"./button-site-navigation-link-list--tc5cs0Z.js";import"./link-button-PGTB6cWq.js";import"./ghost-link-button--yl3mBX4.js";import"./link-button-DuVUI80S.js";import"./cva-CuDB4TaM.js";import"./button-abs7jE4F.js";import"./ghost-button-DVSEpKed.js";import"./button-CFgMdbM0.js";import"./normal-button-Be3dRcwo.js";import"./normal-link-button-BesB8lSN.js";const I={component:i,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[d=>o.jsx("div",{className:u({padding:"1rem"}),children:o.jsx(d,{})})]},r={render:()=>o.jsx(i,{links:c,variant:"anchor"})},t={render:()=>o.jsx(i,{links:c,variant:"button"})};var a,n,s;r.parameters={...r.parameters,docs:{...(a=r.parameters)==null?void 0:a.docs,source:{originalSource:`{
-  render: () => {
-    return <SiteNavigationLinkList links={siteNavigationLinks} variant="anchor" />;
-  }
-}`,...(s=(n=r.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};var e,m,p;t.parameters={...t.parameters,docs:{...(e=t.parameters)==null?void 0:e.docs,source:{originalSource:`{
-  render: () => {
-    return <SiteNavigationLinkList links={siteNavigationLinks} variant="button" />;
-  }
-}`,...(p=(m=t.parameters)==null?void 0:m.docs)==null?void 0:p.source}}};const J=["Anchor","Button"];export{r as Anchor,t as Button,J as __namedExportsOrder,I as default};

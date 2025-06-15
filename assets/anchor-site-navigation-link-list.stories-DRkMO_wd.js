@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-DoEZbXM1.js";import{c as m}from"./css-iA79nXp1.js";import{s as n}from"./mocks-CJ2sqFWx.js";import{A as e}from"./anchor-site-navigation-link-list-Cnl8d6G5.js";import"./jsx-runtime-Bw5QeaCk.js";import"./newspaper-CdRmBF-s.js";import"./createLucideIcon-C1KexMAI.js";import"./index-DDr4uD8U.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Za3YRiuF.js";import"./site-navigation-link-DMIFXQJw.js";import"./link-CiQcZn3-.js";import"./router-context.shared-runtime-C3rDQPqq.js";import"./add-base-path-Yz4dcL5G.js";import"./use-merged-ref-vu_KmdPm.js";import"./cx-BFURdk0p.js";const D={component:e,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[a=>t.jsx("div",{className:m({padding:"1rem"}),children:t.jsx(a,{})})]},r={render:()=>t.jsx(e,{links:n})};var o,i,s;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: () => {
+    return <AnchorSiteNavigationLinkList links={siteNavigationLinks} />;
+  }
+}`,...(s=(i=r.parameters)==null?void 0:i.docs)==null?void 0:s.source}}};const E=["Default"];export{r as Default,E as __namedExportsOrder,D as default};
