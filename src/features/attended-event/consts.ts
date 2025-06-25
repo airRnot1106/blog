@@ -2,7 +2,7 @@ export const attendedEvents = [
   {
     title: 'Nix meetup #1',
     url: 'https://nix-ja.connpass.com/event/330557/',
-    dates: ['2023-10-26'],
+    dates: ['2024-10-26'],
   },
   {
     title: 'VimConf 2024',
