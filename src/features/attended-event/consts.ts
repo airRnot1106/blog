@@ -30,9 +30,9 @@ export const attendedEvents = [
     dates: ['2025-07-13'],
   },
   {
-    title: '「LAPRASもくもく会」7月',
-    url: 'https://lapras.connpass.com/event/357732/',
-    dates: ['2025-07-24'],
+    title: 'Biome v2リリース記念 公式LTパーティ',
+    url: 'https://bitkey.connpass.com/event/357744/',
+    dates: ['2025-07-23'],
   },
 ] as const satisfies {
   title: string;
