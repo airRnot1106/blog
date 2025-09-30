@@ -34,6 +34,16 @@ export const attendedEvents = [
     url: 'https://bitkey.connpass.com/event/357744/',
     dates: ['2025-07-23'],
   },
+  {
+    title: 'フロントエンドカンファレンス東京2025',
+    url: 'https://fec-tokyo.github.io/2025/',
+    dates: ['2025-09-21'],
+  },
+  {
+    title: 'フロントエンドカンファレンス関西2025',
+    url: 'https://frontend-conf.osaka.jp/',
+    dates: ['2025-11-30'],
+  },
 ] as const satisfies {
   title: string;
   url: string;
