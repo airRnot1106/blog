@@ -40,6 +40,11 @@ export const attendedEvents = [
     dates: ['2025-09-21'],
   },
   {
+    title: 'VimConf 2025 Small',
+    url: 'https://vimconf.org/2025/ja/',
+    dates: ['2025-11-02'],
+  },
+  {
     title: 'フロントエンドカンファレンス関西2025',
     url: 'https://frontend-conf.osaka.jp/',
     dates: ['2025-11-30'],
