@@ -45,7 +45,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.0.4",
     "@chromatic-com/storybook": "^3.2.6",
-    "@markuplint/jsx-parser": "^4.7.19",
+    "@markuplint/jsx-parser": "^4.7.21",
     "@markuplint/react-spec": "^4.5.19",
     "@next/bundle-analyzer": "^15.3.4",
     "@pandacss/dev": "^0.53.6",
