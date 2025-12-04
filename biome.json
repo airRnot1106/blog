@@ -9,14 +9,14 @@
     "ignoreUnknown": false,
     "includes": [
       "**",
-      "!**/node_modules/**",
-      "!**/dist/**",
-      "!**/build/**",
-      "!**/out/**",
-      "!**/coverage/**",
-      "!**/.next/**",
-      "!**/.direnv/**",
-      "!**/styled-system/**"
+      "!**/node_modules",
+      "!**/dist",
+      "!**/build",
+      "!**/out",
+      "!**/coverage",
+      "!**/.next",
+      "!**/.direnv",
+      "!**/styled-system"
     ]
   },
   "formatter": {
