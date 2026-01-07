@@ -1,0 +1,63 @@
+==================================================================
+https://keybase.io/airrnot
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://airrnot.dev
+  * I am airrnot (https://keybase.io/airrnot) on keybase.
+  * I have a public key with fingerprint BF2F FD7E 6409 DB18 9880  AF90 B9F0 83E5 5A22 7726
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "011668a347f8a0d0e2f263ef05eeb3dbe8e0092eea7b129e023787493058fe53ffb40a",
+      "fingerprint": "bf2ffd7e6409db189880af90b9f083e55a227726",
+      "host": "keybase.io",
+      "key_id": "b9f083e55a227726",
+      "kid": "011668a347f8a0d0e2f263ef05eeb3dbe8e0092eea7b129e023787493058fe53ffb40a",
+      "uid": "a54533a0eff1eeeac4364888ec211d19",
+      "username": "airrnot"
+    },
+    "service": {
+      "hostname": "airrnot.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1767794380,
+  "expire_in": 157680000,
+  "prev": "b12ab31ef6a1b04412fe37da6c8b1a4774f44b854edcc612e87a7effacc9696d",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.17
+Comment: https://keybase.io/crypto
+
+yMFBAnicrVK/ixQxGJ09PcEF4UC4PyDFgbgc+TVJZtXCTmzE1oNbksmX3XDnzDoz
+e+u5XiEWdhbKVQqKljbKKniVeNqtjVgpttoIIoiVjcmihWBpmpAv773vvY/v9ZED
+SXt579v1TxfQeKU1e7k7Svy6ezNBprTbqDtBGzC/YNNC3fQ2vEVdhAkRQmnGpVMa
+WwzUUcHA4RTAMGtAAcYZBdDSEJoBpkwqyTOGU+UgZc4ZjjXqIOeLPlTDyhdNkDWO
+OmclCI4za4jKlMLaZdhkDisGaaoplZKKQByUdWQEc0bXsOrLUAuP3tzeP/D/2fdo
+LqdTnjKmMThHIJByzgRXSkFOCbEki8AaqkJfhIj2VVWUDdrpoFDc8jnEucYgfwNW
+LWwF5rAqmzIvN8PHoGmGdTcSm+1hRI7B9H5r9IwvbJhiYGxBVfuyQF0SkHnjoyiR
+QsqMM4U7CC4PfQU9HxGpFAqHE/uEdmFmhGrDCDihicGcE+qASatFrgzRXEruODcq
+5WDzXBAKSmoZgus8z0QmLIqpLhUl6qbBpu4Hydr3C92MKkA7++sHk+V2cmhxIS5X
+0j689GflXjxvJbPz7/d/osWHH9+pR+cW7539fOr73uaxJ2vPbt24+nZ2ZtpKppMf
+V24fXRncP/7hy9qJm0/vjL8uvTp5bbp79/SDx6xa+AX7X+SI
+=Jz1u
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/airrnot
+
+==================================================================
