@@ -1,11 +1,6 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
 import createMDX from '@next/mdx';
 import type { NextConfig } from 'next';
-import rehypeMermaid from 'rehype-mermaid';
-import rehypePrettyCode from 'rehype-pretty-code';
-import remarkBreaks from 'remark-breaks';
-import remarkFrontmatter from 'remark-frontmatter';
-import remarkGfm from 'remark-gfm';
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -15,17 +10,23 @@ const withMDX = createMDX({
   // Add markdown plugins here, as desired
   extension: /\.(md|mdx)$/,
   options: {
-    remarkPlugins: [remarkBreaks, remarkFrontmatter, remarkGfm],
+    remarkPlugins: [
+      ['remark-breaks'],
+      ['remark-frontmatter'],
+      ['remark-gfm'],
+      // biome-ignore lint/suspicious/noExplicitAny: due to turbopack issue
+    ] as any,
     rehypePlugins: [
-      rehypeMermaid,
+      ['rehype-mermaid'],
       [
-        rehypePrettyCode,
+        'rehype-pretty-code',
         {
           keepBackground: false,
           theme: 'one-dark-pro',
         },
       ],
-    ],
+      // biome-ignore lint/suspicious/noExplicitAny: due to turbopack issue
+    ] as any,
   },
 });
 
