@@ -73,7 +73,7 @@
     "markuplint": "^4.13.1",
     "playwright": "^1.56.1",
     "scaffdog": "^4.1.0",
-    "storybook": "^8.6.12",
+    "storybook": "^8.6.15",
     "typescript": "^5",
     "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.4",
