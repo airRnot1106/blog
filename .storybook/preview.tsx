@@ -1,6 +1,5 @@
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import type { Preview } from '@storybook/react';
-import React from 'react';
 import { ich1q, zenkaku } from '../src/app/fonts';
 import { SiteThemeProvider } from '../src/features/site-theme/providers';
 

@@ -1,8 +1,9 @@
 /* ======= Markdown 基本レイアウト (.mdc 配下) ======= */
 .mdc {
   font-size: var(--font-sizes-lg);
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
-    "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Segoe UI",
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   line-height: 1.75;
   margin: 0;
   padding: 2rem;
