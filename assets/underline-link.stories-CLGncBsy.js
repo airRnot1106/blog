@@ -1,5 +1,0 @@
-import{j as e}from"./jsx-runtime-DoEZbXM1.js";import{c as a}from"./css-iA79nXp1.js";import{U as s}from"./underline-link-BKNhLiPR.js";import"./jsx-runtime-Bw5QeaCk.js";import"./cx-BFURdk0p.js";import"./link-DOkctWu4.js";import"./link-CiQcZn3-.js";import"./_commonjsHelpers-CqkleIqs.js";import"./router-context.shared-runtime-C3rDQPqq.js";import"./index-Za3YRiuF.js";import"./add-base-path-Yz4dcL5G.js";import"./use-merged-ref-vu_KmdPm.js";const h={component:s,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[i=>e.jsx("div",{className:a({padding:"1rem"}),children:e.jsx(i,{})})]},r={render:()=>e.jsx(s,{href:"#",children:"Underline Link"})};var n,o,t;r.parameters={...r.parameters,docs:{...(n=r.parameters)==null?void 0:n.docs,source:{originalSource:`{
-  render: () => {
-    return <UnderlineLink href="#">Underline Link</UnderlineLink>;
-  }
-}`,...(t=(o=r.parameters)==null?void 0:o.docs)==null?void 0:t.source}}};const g=["Default"];export{r as Default,g as __namedExportsOrder,h as default};

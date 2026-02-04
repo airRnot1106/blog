@@ -1,0 +1,9 @@
+import{j as o}from"./jsx-runtime-DoEZbXM1.js";import{c as u}from"./css-DPgyiPI-.js";import{s as c}from"./mocks-BWxXMxUV.js";import{S as i}from"./site-navigation-link-list-CVeO-A9D.js";import"./jsx-runtime-Bw5QeaCk.js";import"./newspaper-B2V7QdEc.js";import"./createLucideIcon-BQJUwLQr.js";import"./index-DDr4uD8U.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Za3YRiuF.js";import"./anchor-site-navigation-link-list-i0M2c2gZ.js";import"./site-navigation-link-DzLEChcb.js";import"./link-CiQcZn3-.js";import"./router-context.shared-runtime-C3rDQPqq.js";import"./add-base-path-Yz4dcL5G.js";import"./use-merged-ref-vu_KmdPm.js";import"./cx-BFURdk0p.js";import"./button-site-navigation-link-list-Cb3OXcAc.js";import"./link-button-y0cNRyZs.js";import"./ghost-link-button-D9MgmNr2.js";import"./link-button-DpD8wcIz.js";import"./cva-fm4Ct3fq.js";import"./button-Ct_p2D72.js";import"./ghost-button-CNUsKDC-.js";import"./button-4G4nPCzx.js";import"./normal-button-C6yZ4w3c.js";import"./normal-link-button-BzLC_jGu.js";const I={component:i,tags:["autodocs"],parameters:{layout:"fullscreen"},decorators:[d=>o.jsx("div",{className:u({padding:"1rem"}),children:o.jsx(d,{})})]},r={render:()=>o.jsx(i,{links:c,variant:"anchor"})},t={render:()=>o.jsx(i,{links:c,variant:"button"})};var a,n,s;r.parameters={...r.parameters,docs:{...(a=r.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  render: () => {
+    return <SiteNavigationLinkList links={siteNavigationLinks} variant="anchor" />;
+  }
+}`,...(s=(n=r.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};var e,m,p;t.parameters={...t.parameters,docs:{...(e=t.parameters)==null?void 0:e.docs,source:{originalSource:`{
+  render: () => {
+    return <SiteNavigationLinkList links={siteNavigationLinks} variant="button" />;
+  }
+}`,...(p=(m=t.parameters)==null?void 0:m.docs)==null?void 0:p.source}}};const J=["Anchor","Button"];export{r as Anchor,t as Button,J as __namedExportsOrder,I as default};

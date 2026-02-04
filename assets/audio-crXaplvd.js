@@ -1,0 +1,1 @@
+import{j as i}from"./jsx-runtime-DoEZbXM1.js";import{P as t}from"./primary-audio-C7BFPmK9.js";const a=r=>{switch(r.variant){case"primary":return i.jsx(t,{...r});default:return r.variant}};a.__docgenInfo={description:"",methods:[],displayName:"Audio"};export{a as A};

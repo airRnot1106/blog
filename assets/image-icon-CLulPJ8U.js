@@ -1,1 +1,0 @@
-import{j as a}from"./jsx-runtime-DoEZbXM1.js";import{C as r}from"./circle-image-icon-DGM44Y2V.js";import{S as t}from"./square-image-icon-w6xnlA5R.js";const o=e=>{switch(e.variant){case"circle":return a.jsx(r,{...e});case"square":return a.jsx(t,{...e});default:return e}};o.__docgenInfo={description:"",methods:[],displayName:"ImageIcon"};export{o as I};
