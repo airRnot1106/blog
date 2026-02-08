@@ -76,7 +76,7 @@
     "storybook": "^8.6.15",
     "typescript": "^5.9.3",
     "vite-plugin-svgr": "^4.5.0",
-    "vite-tsconfig-paths": "^5.1.4",
+    "vite-tsconfig-paths": "^6.1.0",
     "vitest": "^3.2.4"
   }
 }

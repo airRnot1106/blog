@@ -172,8 +172,8 @@ importers:
         specifier: ^4.5.0
         version: 4.5.0(rollup@4.57.1)(typescript@5.9.3)(vite@7.3.1(@types/node@20.19.31)(jiti@1.21.7)(lightningcss@1.30.2)(terser@5.39.0))
       vite-tsconfig-paths:
-        specifier: ^5.1.4
-        version: 5.1.4(typescript@5.9.3)(vite@7.3.1(@types/node@20.19.31)(jiti@1.21.7)(lightningcss@1.30.2)(terser@5.39.0))
+        specifier: ^6.1.0
+        version: 6.1.0(typescript@5.9.3)(vite@7.3.1(@types/node@20.19.31)(jiti@1.21.7)(lightningcss@1.30.2)(terser@5.39.0))
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/debug@4.1.12)(@types/node@20.19.31)(@vitest/browser@3.1.2)(jiti@1.21.7)(lightningcss@1.30.2)(terser@5.39.0)
@@ -4158,6 +4158,7 @@ packages:
   glob@11.0.3:
     resolution: {integrity: sha512-2Nim7dha1KVkaiF4q6Dj+ngPPMdfvLJEOpZk/jKiUAkqKebpGAWQXAq9z1xu9HKu5lWfqw/FASuccEjyznjPaA==}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   global-directory@4.0.1:
@@ -6879,13 +6880,10 @@ packages:
     peerDependencies:
       vite: '>=2.6.0'
 
-  vite-tsconfig-paths@5.1.4:
-    resolution: {integrity: sha512-cYj0LRuLV2c2sMqhqhGpaO3LretdtMn/BVX4cPLanIZuwwrkVl+lK84E/miEXkCHWXuq65rhNN4rXsBcOB3S4w==}
+  vite-tsconfig-paths@6.1.0:
+    resolution: {integrity: sha512-kpd3sY9glHIDaq4V/Tlc1Y8WaKtutoc3B525GHxEVKWX42FKfQsXvjFOemu1I8VIN8pNbrMLWVTbW79JaRUxKg==}
     peerDependencies:
       vite: '*'
-    peerDependenciesMeta:
-      vite:
-        optional: true
 
   vite@7.3.1:
     resolution: {integrity: sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==}
@@ -14900,12 +14898,11 @@ snapshots:
       - supports-color
       - typescript
 
-  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.3.1(@types/node@20.19.31)(jiti@1.21.7)(lightningcss@1.30.2)(terser@5.39.0)):
+  vite-tsconfig-paths@6.1.0(typescript@5.9.3)(vite@7.3.1(@types/node@20.19.31)(jiti@1.21.7)(lightningcss@1.30.2)(terser@5.39.0)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.9.3)
-    optionalDependencies:
       vite: 7.3.1(@types/node@20.19.31)(jiti@1.21.7)(lightningcss@1.30.2)(terser@5.39.0)
     transitivePeerDependencies:
       - supports-color
