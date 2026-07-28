@@ -1,4 +1,10 @@
+allowBuilds:
+  esbuild: false
+  lefthook: false
+  sharp: false
 onlyBuiltDependencies:
   - esbuild
   - lefthook
   - sharp
+overrides:
+  vite: ^6.4.3
