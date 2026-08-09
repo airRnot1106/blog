@@ -16,7 +16,8 @@
       "!**/coverage",
       "!**/.next",
       "!**/.direnv",
-      "!**/styled-system"
+      "!**/styled-system",
+      "!**/*.svg"
     ]
   },
   "formatter": {
